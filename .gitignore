@@ -1,0 +1,21 @@
+# Bağımlılıklar
+node_modules/
+
+# Derleme çıktısı
+dist/
+dist-ssr/
+
+# Yerel ortam / log dosyaları
+*.local
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Editör / işletim sistemi
+.vscode/*
+!.vscode/extensions.json
+.idea/
+.DS_Store
+Thumbs.db

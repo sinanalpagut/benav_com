@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bêje — Hesap Silme | benav</title>
+  <meta name="description" content="Bêje uygulamasında hesap ve veri silme talebi rehberi.">
+  <meta name="theme-color" content="#f7f6f3" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#121316" media="(prefers-color-scheme: dark)">
+  <link rel="stylesheet" href="../assets/style.css">
+  <link rel="icon" type="image/png" href="../assets/icons/benav.png">
+  <link rel="apple-touch-icon" href="../assets/icons/benav.png">
+  <script>(function(){try{var t=localStorage.getItem('benav-theme');if(!t){t=window.matchMedia&&window.matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light';}document.documentElement.setAttribute('data-theme',t);}catch(e){document.documentElement.setAttribute('data-theme','light');}})();</script>
+</head>
+<body>
+
+  <header class="nav">
+    <div class="wrap">
+      <a class="brand" href="../index.html" aria-label="benav ana sayfa">
+        <span class="mark">b</span> benav
+      </a>
+      <nav class="nav-right">
+        <button class="theme-toggle" type="button" aria-label="Temayı değiştir" title="Açık / Karanlık tema">
+          <svg class="i-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8Z"/></svg>
+          <svg class="i-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4.2"/><path d="M12 2v2.5M12 19.5V22M4.9 4.9l1.8 1.8M17.3 17.3l1.8 1.8M2 12h2.5M19.5 12H22M4.9 19.1l1.8-1.8M17.3 6.7l1.8-1.8"/></svg>
+        </button>
+      </nav>
+    </div>
+  </header>
+
+  <main class="legal">
+    <div class="wrap">
+      <a class="back-link" href="../index.html">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 18l-6-6 6-6"/></svg>
+        Ana sayfaya dön
+      </a>
+
+      <div class="legal-head">
+        <span class="eyebrow">Hesap & Veri Silme</span>
+        <h1>Bêje — Kürtçe-Türkçe Öğren</h1>
+        <p class="meta"><a class="inl" href="https://play.google.com/store/apps/details?id=com.sinan.bejeapp" target="_blank" rel="noopener">Google Play'de görüntüle</a></p>
+      </div>
+
+      <div class="lang-toggle" role="tablist">
+        <button class="lang-btn active" type="button" data-lang="tr">Türkçe</button>
+        <button class="lang-btn" type="button" data-lang="ku">Kurdî</button>
+        <button class="lang-btn" type="button" data-lang="en">English</button>
+      </div>
+
+      <!-- ===================== TÜRKÇE ===================== -->
+      <div class="legal-body lang-section active" id="lang-tr">
+        <h2>Hesap Silme Talebi</h2>
+        <p>Bêje uygulamasındaki hesabınızı ve ilişkili verilerinizi kalıcı olarak silmek için aşağıdaki adımları izleyin.</p>
+
+        <h2>Uygulama İçinden Silme</h2>
+        <ol class="legal-steps">
+          <li>Bêje uygulamasını açın ve hesabınızla giriş yapın</li>
+          <li>Sağ alttaki <strong>Profil</strong> sekmesine gidin</li>
+          <li>Sağ üstteki <strong>Ayarlar</strong> simgesine dokunun</li>
+          <li><strong>Hesabı Sil</strong> seçeneğine dokunun</li>
+          <li>Onay ekranında <strong>Evet, Hesabımı Sil</strong> butonuna basın</li>
+        </ol>
+
+        <h2>E-posta ile Silme Talebi</h2>
+        <p>Uygulamaya erişemiyorsanız, kayıtlı e-posta adresinizden aşağıdaki adrese hesap silme talebi gönderebilirsiniz: <a class="inl" href="mailto:info@benav.com.tr">info@benav.com.tr</a></p>
+        <p>Talebiniz en geç <strong>30 gün</strong> içinde işleme alınacaktır.</p>
+
+        <h2>Silinen Veriler</h2>
+        <table class="legal-table">
+          <thead><tr><th>Veri Türü</th><th>İşlem</th><th>Süre</th></tr></thead>
+          <tbody>
+            <tr><td>Profil bilgileri (ad, e-posta)</td><td><span class="badge badge-danger">Kalıcı silme</span></td><td>Anında</td></tr>
+            <tr><td>Öğrenilen kelimeler ve ilerleme</td><td><span class="badge badge-danger">Kalıcı silme</span></td><td>Anında</td></tr>
+            <tr><td>Kurs ilerlemeleri</td><td><span class="badge badge-danger">Kalıcı silme</span></td><td>Anında</td></tr>
+            <tr><td>Başarımlar ve istatistikler</td><td><span class="badge badge-danger">Kalıcı silme</span></td><td>Anında</td></tr>
+            <tr><td>Analitik verileri</td><td><span class="badge badge-warn">Anonim tutulur</span></td><td>90 gün</td></tr>
+          </tbody>
+        </table>
+
+        <div class="legal-warning">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10.3 3.9 1.8 18a2 2 0 0 0 1.7 3h17a2 2 0 0 0 1.7-3L13.7 3.9a2 2 0 0 0-3.4 0Z"/><path d="M12 9v4M12 17h.01"/></svg>
+          <div><strong>Uyarı:</strong> Hesap silme işlemi geri alınamaz. Tüm kelimeleriniz, ilerlemeniz ve başarımlarınız kalıcı olarak silinecektir.</div>
+        </div>
+      </div>
+
+      <!-- ===================== KURDÎ ===================== -->
+      <div class="legal-body lang-section" id="lang-ku">
+        <h2>Daxwaza Jêbirina Hesab</h2>
+        <p>Ji bo ku hûn hesabê xwe û daneyên têkildar di sepana Bêje de bi awayekî daîmî jêbirin, gavên jêrîn bişopînin.</p>
+
+        <h2>Ji Nav Sepanê Jêbirin</h2>
+        <ol class="legal-steps">
+          <li>Sepana Bêje vekin û bi hesabê xwe têkevin</li>
+          <li>Biçin beşa <strong>Profîl</strong> ya li jêr rastê</li>
+          <li>Li ser îkona <strong>Mîheng</strong> ya li jorê rastê bitikînin</li>
+          <li>Li ser vebijarka <strong>Hesab Jêbibe</strong> bitikînin</li>
+          <li>Di dîmendera pejirandinê de bişkoja <strong>Erê, Hesabê Min Jêbibe</strong> bitikînin</li>
+        </ol>
+
+        <h2>Bi E-nameyê Daxwaza Jêbirinê</h2>
+        <p>Heke hûn nikaribin bigihîjin sepanê, ji navnîşana e-nameya xwe ya qeydkirî daxwaza jêbirina hesab bişînin: <a class="inl" href="mailto:info@benav.com.tr">info@benav.com.tr</a></p>
+        <p>Daxwaza we herî zêde di nav <strong>30 rojan</strong> de tê şêwirandin.</p>
+
+        <h2>Daneyên ku Têne Jêbirin</h2>
+        <table class="legal-table">
+          <thead><tr><th>Cureyê Daneyê</th><th>Çalakî</th><th>Dem</th></tr></thead>
+          <tbody>
+            <tr><td>Agahiyên profîlê (nav, e-name)</td><td><span class="badge badge-danger">Jêbirina daîmî</span></td><td>Yekser</td></tr>
+            <tr><td>Peyvên fêrbûyî û pêşveçûn</td><td><span class="badge badge-danger">Jêbirina daîmî</span></td><td>Yekser</td></tr>
+            <tr><td>Pêşveçûnên kursan</td><td><span class="badge badge-danger">Jêbirina daîmî</span></td><td>Yekser</td></tr>
+            <tr><td>Destkeftin û amar</td><td><span class="badge badge-danger">Jêbirina daîmî</span></td><td>Yekser</td></tr>
+            <tr><td>Daneyên analîtîk</td><td><span class="badge badge-warn">Anonîm dimîne</span></td><td>90 roj</td></tr>
+          </tbody>
+        </table>
+
+        <div class="legal-warning">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10.3 3.9 1.8 18a2 2 0 0 0 1.7 3h17a2 2 0 0 0 1.7-3L13.7 3.9a2 2 0 0 0-3.4 0Z"/><path d="M12 9v4M12 17h.01"/></svg>
+          <div><strong>Hişyarî:</strong> Jêbirina hesab nayê paşvekişandin. Hemû peyv, pêşveçûn û destkeftinên we bi awayekî daîmî têne jêbirin.</div>
+        </div>
+      </div>
+
+      <!-- ===================== ENGLISH ===================== -->
+      <div class="legal-body lang-section" id="lang-en">
+        <h2>Account Deletion Request</h2>
+        <p>Follow the steps below to permanently delete your Bêje account and all associated data.</p>
+
+        <h2>Delete from the App</h2>
+        <ol class="legal-steps">
+          <li>Open the Bêje app and sign in to your account</li>
+          <li>Go to the <strong>Profile</strong> tab at the bottom right</li>
+          <li>Tap the <strong>Settings</strong> icon at the top right</li>
+          <li>Tap <strong>Delete Account</strong></li>
+          <li>On the confirmation screen, tap <strong>Yes, Delete My Account</strong></li>
+        </ol>
+
+        <h2>Request Deletion via Email</h2>
+        <p>If you cannot access the app, send an account deletion request from your registered email address to: <a class="inl" href="mailto:info@benav.com.tr">info@benav.com.tr</a></p>
+        <p>Your request will be processed within <strong>30 days</strong>.</p>
+
+        <h2>Data That Will Be Deleted</h2>
+        <table class="legal-table">
+          <thead><tr><th>Data Type</th><th>Action</th><th>Timeline</th></tr></thead>
+          <tbody>
+            <tr><td>Profile information (name, email)</td><td><span class="badge badge-danger">Permanent deletion</span></td><td>Immediate</td></tr>
+            <tr><td>Learned words and progress</td><td><span class="badge badge-danger">Permanent deletion</span></td><td>Immediate</td></tr>
+            <tr><td>Course progress</td><td><span class="badge badge-danger">Permanent deletion</span></td><td>Immediate</td></tr>
+            <tr><td>Achievements and statistics</td><td><span class="badge badge-danger">Permanent deletion</span></td><td>Immediate</td></tr>
+            <tr><td>Analytics data</td><td><span class="badge badge-warn">Anonymized</span></td><td>90 days</td></tr>
+          </tbody>
+        </table>
+
+        <div class="legal-warning">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10.3 3.9 1.8 18a2 2 0 0 0 1.7 3h17a2 2 0 0 0 1.7-3L13.7 3.9a2 2 0 0 0-3.4 0Z"/><path d="M12 9v4M12 17h.01"/></svg>
+          <div><strong>Warning:</strong> Account deletion is irreversible. All your words, progress, and achievements will be permanently deleted.</div>
+        </div>
+      </div>
+
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="wrap">
+      <div class="footer-bottom" style="border-top:none;margin-top:0;padding-top:0;">
+        <span>© <span id="year">2026</span> Bêje — Kürtçe Öğren. Tüm hakları saklıdır.</span>
+        <span><a href="../index.html" style="color:inherit;">benav.com.tr</a></span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../assets/main.js"></script>
+  <script>
+    document.querySelectorAll('.lang-btn').forEach(function (btn) {
+      btn.addEventListener('click', function () {
+        var lang = btn.getAttribute('data-lang');
+        document.querySelectorAll('.lang-section').forEach(function (s) { s.classList.remove('active'); });
+        document.querySelectorAll('.lang-btn').forEach(function (b) { b.classList.remove('active'); });
+        document.getElementById('lang-' + lang).classList.add('active');
+        btn.classList.add('active');
+        document.documentElement.lang = lang;
+      });
+    });
+  </script>
+</body>
+</html>

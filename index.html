@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>benav — Mobil Uygulama Geliştiricisi</title>
+  <meta name="description" content="benav — sade ve özenli mobil uygulamalar. Hadisim Var, Esmaül Hüsna ve Linguist. Google Play'de.">
+  <meta name="theme-color" content="#f7f6f3" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#121316" media="(prefers-color-scheme: dark)">
+  <link rel="icon" type="image/png" href="/icons/benav.png">
+  <link rel="apple-touch-icon" href="/icons/benav.png">
+  <!-- FOUC önleme: boya öncesi temayı uygula -->
+  <script>(function(){try{var t=localStorage.getItem('benav-theme');if(!t){t=window.matchMedia&&window.matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light';}document.documentElement.setAttribute('data-theme',t);}catch(e){document.documentElement.setAttribute('data-theme','light');}})();</script>
+</head>
+<body>
+  <div id="root"></div>
+  <script type="module" src="/src/main.jsx"></script>
+</body>
+</html>
