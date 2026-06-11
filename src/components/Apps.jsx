@@ -70,6 +70,12 @@ function AppCard({ app, index }) {
       <div className="store-row"><StoreButtons app={app} /></div>
       <div className="card-legal">
         <a href={app.privacy}>Gizlilik Politikası</a>
+        {app.privacyApple && app.privacyAppleVisible && (
+          <>
+            <span className="sep">·</span>
+            <a href={app.privacyApple}>iOS Gizlilik</a>
+          </>
+        )}
         {app.deletion && (
           <>
             <span className="sep">·</span>

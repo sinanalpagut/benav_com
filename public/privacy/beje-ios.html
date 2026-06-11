@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bêje — Gizlilik Politikası (iOS) | benav</title>
+  <meta name="description" content="Bêje — Kürtçe–Türkçe Öğren uygulaması gizlilik politikası (iOS ve Android).">
+  <meta name="theme-color" content="#f7f6f3" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#121316" media="(prefers-color-scheme: dark)">
+  <link rel="stylesheet" href="/privacy/style.css">
+  <link rel="icon" type="image/png" href="/icons/benav.png">
+  <link rel="apple-touch-icon" href="/icons/benav.png">
+  <script>(function(){try{var t=localStorage.getItem('benav-theme');if(!t){t=window.matchMedia&&window.matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light';}document.documentElement.setAttribute('data-theme',t);}catch(e){document.documentElement.setAttribute('data-theme','light');}})();</script>
+</head>
+<body>
+
+  <header class="nav">
+    <div class="wrap">
+      <a class="brand" href="/" aria-label="benav ana sayfa">
+        <span class="mark">b</span> benav
+      </a>
+      <nav class="nav-right">
+        <button class="theme-toggle" type="button" aria-label="Temayı değiştir" title="Açık / Karanlık tema">
+          <svg class="i-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8Z"/></svg>
+          <svg class="i-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4.2"/><path d="M12 2v2.5M12 19.5V22M4.9 4.9l1.8 1.8M17.3 17.3l1.8 1.8M2 12h2.5M19.5 12H22M4.9 19.1l1.8-1.8M17.3 6.7l1.8-1.8"/></svg>
+        </button>
+      </nav>
+    </div>
+  </header>
+
+  <main class="legal">
+    <div class="wrap">
+      <a class="back-link" href="/">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 18l-6-6 6-6"/></svg>
+        Ana sayfaya dön
+      </a>
+
+      <div class="legal-head">
+        <span class="eyebrow">Gizlilik Politikası</span>
+        <h1>Bêje — Kürtçe–Türkçe Öğren</h1>
+        <p class="meta">Yürürlük tarihi: 11 Haziran 2026 &nbsp;·&nbsp; Geçerli platformlar: iOS ve Android &nbsp;·&nbsp; <a class="inl" href="https://play.google.com/store/apps/details?id=com.sinan.bejeapp" target="_blank" rel="noopener">Google Play'de görüntüle</a></p>
+      </div>
+
+      <div class="legal-body">
+        <p>Bu gizlilik politikası, <b>benav</b> ("biz") tarafından geliştirilen <b>Bêje — Kürtçe–Türkçe Öğren</b> uygulaması ("Uygulama") için geçerlidir. Gizliliğinize önem veriyoruz; bu metin hangi verileri, neden ve nasıl işlediğimizi açıklar.</p>
+
+        <h2>1. Topladığımız Veriler</h2>
+
+        <h3>a) Hesap bilgileri (yalnızca giriş yaparsanız)</h3>
+        <p>Uygulamayı <strong>misafir olarak</strong> hesapsız kullanabilirsiniz. Giriş yapmayı seçerseniz, kullandığınız yönteme göre şu bilgiler işlenir:</p>
+        <ul>
+          <li>E-posta adresi (e-posta/şifre veya Google ile giriş)</li>
+          <li>Görünen ad (isteğe bağlı olarak sizin belirlediğiniz)</li>
+        </ul>
+        <p>Kimlik doğrulama <strong>Google Firebase Authentication</strong> ile sağlanır.</p>
+
+        <h3>b) Öğrenme verileri</h3>
+        <p>Kelimeleriniz, çalışma ilerlemeniz, ustalık seviyeleri, seriler ve günlük hedefler. Bu veriler <strong>öncelikle cihazınızda</strong> saklanır. Giriş yaparsanız ve bulut yedeklemeyi kullanırsanız, bu veriler hesabınıza bağlı olarak <strong>Google Firebase (Firestore)</strong> üzerinde de saklanır (cihazlar arası senkronizasyon ve yedekleme için).</p>
+
+        <h3>c) Yapay zeka (AI) arama metni</h3>
+        <p>Bir kelimeyi "AI ile keşfet" özelliğiyle aradığınızda, girdiğiniz metin anlam/telaffuz/örnek cümle üretmek üzere <strong>Google Gemini API</strong>'ye gönderilir. Bu metni kişisel kimliğinizle ilişkilendirmeyiz.</p>
+
+        <h3>d) Paylaşılan ortak sözlük</h3>
+        <p>Uygulama, tüm kullanıcıların birlikte büyüttüğü ortak bir Kürtçe–Türkçe sözlük kullanır. Giriş yapmış bir kullanıcı olarak AI ile <strong>yeni</strong> bir kelime keşfettiğinizde, bulunan sözlük bilgisi (Kürtçe terim, Türkçe karşılık, tür, telaffuz ve örnek cümle) diğer kullanıcıların da ücretsiz faydalanması için paylaşılan bir veritabanına (<strong>Google Firebase Firestore</strong>) eklenir. Bu kayıt <strong>yalnızca sözlük verisi</strong> içerir; <strong>kimliğinizle ilişkilendirilmez</strong> (adınız, e-postanız veya kişisel ilerlemeniz bu ortak sözlüğe yazılmaz). Misafir kullanıcılar ortak sözlükten yalnızca yararlanır, ona yazmaz.</p>
+
+        <h3>e) Telaffuz sesi</h3>
+        <p>Kelime telaffuzlarını dinlediğinizde, ilgili ses dosyası <strong>Google Firebase Storage</strong> üzerinden indirilir ve cihazınızda önbelleğe alınır. Bu işlem yalnızca kelimeye karşılık gelen ses dosyasını getirir; kişisel veri göndermez.</p>
+
+        <h3>f) Reklam ve ölçüm verileri</h3>
+        <p>Uygulama, ücretsiz sürümde <strong>Google AdMob</strong> aracılığıyla reklam gösterebilir. AdMob, reklamların sunulması ve ölçülmesi için cihaz ve reklam tanımlayıcıları (ör. iOS'ta IDFA, Android'de Reklam Kimliği) gibi verileri işleyebilir. Ayrıca temel, çoğunlukla anonim kullanım istatistikleri için <strong>Firebase Analytics</strong> kullanılabilir.</p>
+
+        <h3>g) Abonelik ve satın alma durumu</h3>
+        <p>Premium (reklamsız ve sınırsız özellikler) için <strong>aylık veya yıllık otomatik yenilenen abonelik</strong> satın alabilirsiniz. Abonelik işlemi, yenilenmesi ve ücretlendirmesi ilgili mağaza (iOS'ta Apple App Store, Android'de Google Play) tarafından yönetilir; <strong>ödeme/kart bilgilerinizi biz görmeyiz veya saklamayız.</strong> Uygulama yalnızca aboneliğinizin etkin olup olmadığını öğrenir.</p>
+
+        <h2>2. Verileri Nasıl Kullanırız</h2>
+        <ul>
+          <li>Uygulamanın temel işlevlerini sağlamak (kelime öğrenme, tekrar, senkronizasyon)</li>
+          <li>Hesabınızı doğrulamak ve verilerinizi cihazlar arasında eşitlemek</li>
+          <li>AI ile kelime anlam/örnek üretmek ve ortak sözlüğü büyütmek</li>
+          <li>Ücretsiz sürümde reklam göstermek ve uygulamayı iyileştirmek</li>
+          <li>Abonelik durumunuza göre premium özellikleri açmak</li>
+          <li>Bildirim hatırlatıcıları (cihaz üzerinde planlanır)</li>
+        </ul>
+
+        <h2>3. Üçüncü Taraf Hizmetler</h2>
+        <p>Uygulama aşağıdaki üçüncü taraf hizmetleri kullanır; bu hizmetlerin kendi gizlilik politikaları geçerlidir:</p>
+        <ul>
+          <li><strong>Google Firebase</strong> (Authentication, Firestore, Storage, Analytics, Remote Config) — <a class="inl" href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener">gizlilik politikası</a></li>
+          <li><strong>Google Gemini API</strong> (AI kelime keşfi) — <a class="inl" href="https://ai.google.dev/gemini-api/terms" target="_blank" rel="noopener">kullanım şartları</a></li>
+          <li><strong>Google AdMob</strong> (reklam) — <a class="inl" href="https://policies.google.com/technologies/ads" target="_blank" rel="noopener">reklam politikası</a></li>
+          <li><strong>Apple</strong> (iOS'ta App Store / abonelik) — <a class="inl" href="https://www.apple.com/legal/privacy/" target="_blank" rel="noopener">gizlilik politikası</a></li>
+          <li><strong>Google Play</strong> (Android'de abonelik) — <a class="inl" href="https://policies.google.com/privacy" target="_blank" rel="noopener">gizlilik politikası</a></li>
+        </ul>
+        <p>Verilerinizi bu hizmetlerin işlevleri dışında üçüncü taraflara <strong>satmayız</strong>.</p>
+
+        <h2>4. Veri Saklama ve Senkronizasyon</h2>
+        <ul>
+          <li>Giriş yapmazsanız verileriniz yalnızca cihazınızda kalır; uygulamayı silerseniz bu veriler de silinir.</li>
+          <li>Giriş yapar ve yedeklerseniz verileriniz hesabınıza bağlı olarak bulutta saklanır ve hesabınızı silene kadar tutulur.</li>
+          <li>Ortak sözlüğe eklenen kelimeler genel sözlük içeriği olduğundan kimliğinizle ilişkilendirilmez ve hesap silme işleminden bağımsız olarak ortak sözlükte kalabilir.</li>
+        </ul>
+
+        <h2>5. Reklamlar ve İzleme (iOS)</h2>
+        <p>iOS'ta kişiselleştirilmiş reklam için cihaz tarafından izleme izni istenebilir (App Tracking Transparency). İzin vermezseniz reklamlar genel (kişiselleştirilmemiş) olarak sunulur; uygulamayı yine de tam olarak kullanabilirsiniz.</p>
+
+        <h2>6. Haklarınız ve Hesap Silme</h2>
+        <ul>
+          <li>Verilerinize uygulama içinden erişebilirsiniz.</li>
+          <li><strong>Hesabınızı ve buluttaki verilerinizi uygulama içinden silebilirsiniz</strong> (Ayarlar → Hesabımı Sil). Bu işlem hesabınızı ve ilişkili bulut verilerinizi (hesabınıza bağlı kelimeler ve ilerleme) kalıcı olarak kaldırır ve geri alınamaz. Kimliğinizle ilişkili olmayan ortak sözlük kayıtları bundan etkilenmez.</li>
+          <li>Dilerseniz <a class="inl" href="mailto:info@benav.com.tr">info@benav.com.tr</a> adresinden bizimle iletişime geçerek veri erişimi/silme talebinde bulunabilirsiniz.</li>
+        </ul>
+
+        <h2>7. Çocukların Gizliliği</h2>
+        <p>Uygulama genel kitleye yönelik bir eğitim uygulamasıdır ve bilinçli olarak 13 yaş altı çocuklardan kişisel veri toplamaz.</p>
+
+        <h2>8. Veri Güvenliği</h2>
+        <p>Verilerinizi korumak için sektör standardı önlemler (ör. güvenli bağlantılar, Firebase güvenlik kuralları) kullanırız. Ancak hiçbir internet aktarımının %100 güvenli olmadığını hatırlatırız.</p>
+
+        <h2>9. Değişiklikler</h2>
+        <p>Bu politikayı zaman zaman güncelleyebiliriz. Önemli değişikliklerde yürürlük tarihini güncelleriz; güncel sürüm bu sayfada yayınlanır.</p>
+
+        <h2>10. İletişim</h2>
+        <p>Sorularınız için: <a class="inl" href="mailto:info@benav.com.tr">info@benav.com.tr</a></p>
+        <p>Geliştirici: <strong>benav</strong> — <a class="inl" href="https://benav.com.tr" target="_blank" rel="noopener">benav.com.tr</a></p>
+      </div>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="wrap">
+      <div class="footer-bottom" style="border-top:none;margin-top:0;padding-top:0;">
+        <span>© <span id="year">2026</span> benav · Bêje. Tüm hakları saklıdır.</span>
+        <span><a href="/" style="color:inherit;">benav.com.tr</a></span>
+      </div>
+    </div>
+  </footer>
+
+  <script>(function(){var b=document.querySelector(".theme-toggle");if(b)b.addEventListener("click",function(){var c=document.documentElement.getAttribute("data-theme")==="dark"?"light":"dark";document.documentElement.setAttribute("data-theme",c);try{localStorage.setItem("benav-theme",c);}catch(e){}});var y=document.getElementById("year");if(y)y.textContent=new Date().getFullYear();})();</script>
+</body>
+</html>

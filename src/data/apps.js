@@ -30,6 +30,8 @@ export const APPS = [
     googlePlayUrl: "https://play.google.com/store/apps/details?id=com.sinan.bejeapp",
     appStoreUrl: "",
     privacy: "/privacy/beje.html",
+    privacyApple: "/privacy/beje-ios.html",
+    privacyAppleVisible: false, // iOS uygulaması App Store'da yayınlanınca true yapın
     deletion: "/privacy/beje-hesap-silme.html",
   },
   {
