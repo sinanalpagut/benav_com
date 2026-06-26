@@ -28,10 +28,10 @@ export const APPS = [
     desc: "Bêje ile Kürtçe ve Türkçe arasında kelime öğrenmek artık çok daha etkili ve eğlenceli!",
     icon: "/icons/beje.png",
     googlePlayUrl: "https://play.google.com/store/apps/details?id=com.sinan.bejeapp",
-    appStoreUrl: "",
+    appStoreUrl: "https://apps.apple.com/us/app/b%C3%AAje-k%C3%BCrt%C3%A7e-%C3%B6%C4%9Fren/id6780462851",
     privacy: "/privacy/beje.html",
     privacyApple: "/privacy/beje-ios.html",
-    privacyAppleVisible: false, // iOS uygulaması App Store'da yayınlanınca true yapın
+    privacyAppleVisible: true, // iOS uygulaması App Store'da yayında
     deletion: "/privacy/beje-hesap-silme.html",
   },
   {
