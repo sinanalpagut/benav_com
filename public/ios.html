@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="tr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Bêje — App Store</title>
+<meta name="theme-color" content="#f7f6f3" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#121316" media="(prefers-color-scheme: dark)">
+<script>(function(){try{var t=localStorage.getItem('benav-theme');if(!t){t=window.matchMedia&&window.matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light';}document.documentElement.setAttribute('data-theme',t);}catch(e){document.documentElement.setAttribute('data-theme','light');}})();</script>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400&display=swap');
+  :root{
+    --font:'Mulish',-apple-system,BlinkMacSystemFont,'Segoe UI',system-ui,sans-serif;
+    --bg:#f7f6f3; --surface:#ffffff; --text:#1c1b18; --text-soft:#51504a;
+    --border:#e7e4dd; --accent:#1e3a5f; --accent-2:#2c5180; --accent-ink:#ffffff;
+    --shadow-lg:0 18px 40px -16px rgba(20,30,50,.20), 0 4px 12px rgba(28,27,24,.06);
+    --radius-lg:22px;
+  }
+  [data-theme="dark"]{
+    --bg:#121316; --surface:#1b1d22; --text:#f2f1ee; --text-soft:#b7b5ad;
+    --border:#2a2c31; --accent:#5b8bd6; --accent-2:#4a76b8; --accent-ink:#0c0d0f;
+  }
+  *{box-sizing:border-box}
+  body{
+    margin:0; min-height:100dvh; display:flex; align-items:center; justify-content:center;
+    background:var(--bg); color:var(--text); font-family:var(--font);
+    padding:32px 20px;
+  }
+  .card{
+    max-width:380px; width:100%; background:var(--surface); border:1px solid var(--border);
+    border-radius:var(--radius-lg); box-shadow:var(--shadow-lg); padding:36px 28px;
+    text-align:center;
+  }
+  img{width:88px; height:88px; border-radius:20px; box-shadow:0 4px 14px rgba(0,0,0,.15); margin-bottom:18px;}
+  h1{font-size:20px; font-weight:800; margin:0 0 8px;}
+  p{font-size:15px; color:var(--text-soft); line-height:1.5; margin:0 0 24px;}
+  a.btn{
+    display:block; text-decoration:none; background:var(--accent); color:var(--accent-ink);
+    font-weight:700; font-size:16px; padding:15px 20px; border-radius:14px;
+    transition:opacity .15s;
+  }
+  a.btn:active{opacity:.85}
+  .hint{margin-top:16px; font-size:12px; color:var(--text-soft); opacity:.75}
+</style>
+</head>
+<body>
+  <div class="card">
+    <img src="/icons/beje.png" alt="Bêje">
+    <h1>Bêje: Kürtçe Öğren</h1>
+    <p>App Store'da açmak için aşağıya dokun.</p>
+    <a class="btn" id="open" href="https://apps.apple.com/tr/app/id6780462851">App Store'da Aç</a>
+    <div class="hint">Açılmazsa bu sayfayı Safari'de aç.</div>
+  </div>
+</body>
+</html>
