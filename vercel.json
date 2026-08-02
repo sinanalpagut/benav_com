@@ -6,5 +6,12 @@
       "source": "/app-ads.txt",
       "headers": [{ "key": "Content-Type", "value": "text/plain; charset=utf-8" }]
     }
+  ],
+  "redirects": [
+    {
+      "source": "/ios",
+      "destination": "https://apps.apple.com/tr/app/id6780462851",
+      "permanent": false
+    }
   ]
 }
