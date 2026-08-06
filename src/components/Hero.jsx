@@ -5,7 +5,7 @@ export default function Hero() {
         <span className="kicker">Mobil Uygulama Geliştiricisi</span>
         <h1>Günlük hayatı kolaylaştıran Mobil uygulamaları geliştiriyorum.</h1>
         <p className="lead">
-          Ben benav. Fikirden Google Play ve Apple Store'a kadar her aşamada; sade, işlevsel ve
+          Ben benav. Fikirden Google Play ve App Store'a kadar her aşamada; sade, işlevsel ve
           özenli mobil deneyimler tasarlıyorum.
         </p>
         <div className="hero-cta">

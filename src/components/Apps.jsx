@@ -95,8 +95,8 @@ export default function Apps() {
           <span className="eyebrow">Çalışmalarım</span>
           <h2>Uygulamalarım</h2>
           <p>
-            Google Play Store'da yayınladığım uygulamalar. İncelemek için kartlardaki bağlantıyı
-            kullanabilirsiniz.
+            Google Play ve App Store'da yayınladığım uygulamalar. İncelemek için kartlardaki
+            bağlantıyı kullanabilirsiniz.
           </p>
         </div>
         <div className="apps-grid" id="apps-grid">
