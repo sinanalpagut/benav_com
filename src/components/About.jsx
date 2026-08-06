@@ -10,9 +10,9 @@ export default function About() {
             <span className="eyebrow">Hakkımda</span>
             <h2>Sadelik ve özenle.</h2>
             <p>
-              Mobil dünyada işlevsel ve insana dokunan Android uygulamaları geliştiriyorum. Fikirden
-              Play Store ve Apple Store'a kadar tasarım, geliştirme ve en küçük detaya gösterilen
-              özen benim için aynı önemde.
+              Mobil dünyada işlevsel ve insana dokunan uygulamalar geliştiriyorum. Fikirden Google
+              Play ve App Store'a kadar tasarım, geliştirme ve en küçük detaya gösterilen özen benim
+              için aynı önemde.
             </p>
             <p>
               Amacım; karmaşadan uzak, anlaşılır ve kullanıcıların günlük hayatına küçük ama anlamlı
