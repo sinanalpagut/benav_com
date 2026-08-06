@@ -10,8 +10,7 @@ export default function Footer() {
           <div className="footer-about">
             <a className="brand" href="#top"><span className="mark">b</span> benav</a>
             <p className="tagline">
-              Sade ve özenli Android uygulamaları. Google Play'de. Çok Yakında Apple Store'da da
-              hizmetinizdeyiz
+              Sade ve özenli mobil uygulamalar. Google Play ve App Store'da.
             </p>
           </div>
           <div className="footer-col">
