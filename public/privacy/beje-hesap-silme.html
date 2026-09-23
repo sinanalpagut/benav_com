@@ -51,7 +51,8 @@
       <div class="legal-body lang-section active" id="lang-tr">
         <h2>Hesap Silme Talebi</h2>
         <p>Bêje uygulamasındaki hesabınızı ve ilişkili verilerinizi kalıcı olarak silmek için aşağıdaki adımları izleyin. Adımlar Android ve iPhone'da aynıdır.</p>
-        <p><strong>Misafir olarak kullanıyorsanız</strong> hesabınız yoktur; verileriniz yalnızca cihazınızda tutulur ve uygulamadaki <em>Ayarlar &gt; Veri &gt; Tüm Verileri Sil</em> seçeneğiyle ya da uygulamayı kaldırarak silinir.</p>
+        <p><strong>Misafir olarak kullanıyorsanız</strong> hesabınız yoktur. Öğrenme verileriniz (kelimeler, listeler, seri ve ilerleme) cihazınızda tutulur. Bunları Ayarlar ekranındaki <em>Tüm Verileri Sil</em> seçeneğiyle ya da uygulamayı kaldırarak silebilirsiniz. Telefonunuzun yedeklemesi açıksa (Android'de Google yedeği, iPhone'da iCloud yedeği) bu veriler kendi hesabınızdaki cihaz yedeğine de kopyalanabilir. Uygulamayı yeniden yüklediğinizde ya da telefonunuzu bu yedekten geri yüklediğinizde bu veriler geri gelebilir. Bu yedeğe biz erişemeyiz.</p>
+        <p>Yine de bazı veriler misafirlerden de toplanır: cihaz kimlikleri, IP adresinizden çıkarılan yaklaşık konum, kullanım verileri, kilitlenme ve teşhis verileri. Aradığınız bir kelime kütüphanenizde ve ortak sözlükte yoksa çeviri için Google Gemini'ye gönderilir. Bir konu seçip kelime istediğinizde de seçtiğiniz konu Gemini'ye gönderilir. Misafirken gönderdiğiniz geri bildirim ve kelime bildirimleri de kimliğiniz olmadan sunucuda saklanır. Ayrıntılar <a class="inl" href="/privacy/beje.html">Android gizlilik politikasında</a> yer alır.</p>
 
         <h2>Uygulama İçinden Silme</h2>
         <ol class="legal-steps">
@@ -79,9 +80,23 @@
             <tr><td>Premium kaydı</td><td><span class="badge badge-danger">Kalıcı silme</span></td><td>Anında</td></tr>
             <tr><td>Geri bildirim ve telaffuz kullanım sayaçları</td><td><span class="badge badge-danger">Kalıcı silme</span></td><td>Anında</td></tr>
             <tr><td>Gönderilen kelime bildirimleri</td><td><span class="badge badge-warn">E-posta adresi kaldırılır</span></td><td>Anında</td></tr>
-            <tr><td>Analitik verileri</td><td><span class="badge badge-warn">Kimliğe bağlanmadan tutulur</span></td><td>En fazla 90 gün</td></tr>
+            <tr><td>Analiz verileri (Google Analytics)</td><td><span class="badge badge-warn">Hesaba bağlı değil</span></td><td>En fazla 14 ay</td></tr>
+            <tr><td>Kilitlenme raporları (Firebase Crashlytics)</td><td><span class="badge badge-warn">Hesaba bağlı değil</span></td><td>90 gün</td></tr>
+            <tr><td>Sunucu kayıtları (hesap kimliğinizi içerebilir)</td><td><span class="badge badge-warn">Kendiliğinden silinir</span></td><td>Yaklaşık 30 gün</td></tr>
+            <tr><td>Silinen verilerin Firebase yedeklerindeki kopyaları</td><td><span class="badge badge-warn">Kendiliğinden silinir</span></td><td>En fazla 180 gün</td></tr>
           </tbody>
         </table>
+
+        <h2>Hesap Silmeyle Kaldırılmayan Veriler</h2>
+        <p>Aşağıdaki veriler hesabınıza bağlı değildir ya da bizim elimizde değildir. Bu yüzden hesap silme onları kaldırmaz.</p>
+        <ul>
+          <li><strong>Misafirken gönderilen geri bildirim ve kelime bildirimleri:</strong> Kimliğiniz olmadan kaydedilir. Hangi kaydın size ait olduğunu bilemediğimiz için hesap silme bunları kaldırmaz.</li>
+          <li><strong>Google Gemini'ye gönderilen aramalar ve konular:</strong> Kütüphanenizde ve ortak sözlükte bulunmayan kelimeler çeviri için, yeni kelime istediğiniz konular da kelime üretmek için Gemini'ye gönderilir. Google bunları kötüye kullanımı tespit etmek için sınırlı bir süre saklayabilir. Bu kayıtlar bizde değil, Google'dadır.</li>
+          <li><strong>Ortak sözlük önbelleği:</strong> Giriş yapmışken Gemini'nin sizin için ürettiği yeni kelimeler ve çevirileri, sizinle ilgili hiçbir bilgi içermeden, tüm kullanıcıların kullandığı sözlük önbelleğine eklenebilir. Arama yaptıysanız aradığınız metin de kaydın arama anahtarı olarak saklanır.</li>
+          <li><strong>Toplu istatistikler:</strong> Günlük kullanıcı sayısı gibi toplu raporlar kimseyle ilişkilendirilmez. Yukarıdaki sürelerden daha uzun tutulabilir.</li>
+          <li><strong>Reklam verileri:</strong> Ücretsiz sürümdeki reklamları Google AdMob gösterir. Google'ın topladığı reklam verileri Google'ın kendi kurallarına göre saklanır. Android'de reklam kimliğinizi cihaz ayarlarından (<em>Google &gt; Reklamlar</em>) sıfırlayabilir ya da silebilirsiniz.</li>
+          <li><strong>Telefonunuzun kendi yedeği:</strong> Telefonunuzun yedeklemesi açıksa (Android'de Google yedeği, iPhone'da iCloud yedeği), silmeden önce alınmış cihaz yedeğiniz kendi hesabınızda bir süre kalabilir. Uygulamayı yeniden yüklediğinizde ya da telefonunuzu bu yedekten geri yüklediğinizde eski kelimeleriniz geri gelebilir. Bu yedeğe biz erişemeyiz.</li>
+        </ul>
 
         <div class="legal-warning">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10.3 3.9 1.8 18a2 2 0 0 0 1.7 3h17a2 2 0 0 0 1.7-3L13.7 3.9a2 2 0 0 0-3.4 0Z"/><path d="M12 9v4M12 17h.01"/></svg>
@@ -93,7 +108,8 @@
       <div class="legal-body lang-section" id="lang-ku">
         <h2>Daxwaza Jêbirina Hesabê</h2>
         <p>Ji bo ku hesabê xwe û hemû daneyên pê ve girêdayî bi awayekî daîmî jê bibî, gavên jêrîn bişopîne. Gav li Android û iPhone'ê wek hev in.</p>
-        <p><strong>Heke tu wek mêvan bi kar tînî</strong>, hesabê te tune ye; dane tenê li ser cihazê te ne û bi <em>Mîheng &gt; Dane &gt; Hemû Daneyan Jê Bibe</em> an bi rakirina sepanê tên jêbirin.</p>
+        <p><strong>Heke tu wek mêvan bi kar tînî</strong>, hesabê te tune ye. Daneyên te yên fêrbûnê (peyv, lîste, rêze û pêşketin) li ser cihazê te dimînin. Tu dikarî wan bi vebijêrka <em>Hemû Daneyan Jê Bibe</em> ya di ekrana <em>Mîheng</em> de, an bi rakirina sepanê jê bibî. Heke yedekkirina telefona te vekirî be (li Android yedeka Google, li iPhone yedeka iCloud), dibe ku ev dane li yedeka cihazê ya di hesabê te de jî bên kopîkirin. Dema ku tu sepanê ji nû ve saz bikî an telefona xwe ji wê yedekê vegerînî, dibe ku ev dane vegerin. Em nikarin bigihîjin wê yedekê.</p>
+        <p>Lê hin dane ji mêvanan jî tên berhevkirin: nasnameyên cihazê, cihê texmînî yê ku ji navnîşana IP-ya te tê derxistin, daneyên bikaranînê û daneyên têkçûn û teşhîsê. Heke peyveke ku tu lê digerî ne di pirtûkxaneya te de û ne jî di ferhenga hevpar de be, ji bo wergerê ji Google Gemini re tê şandin. Dema ku tu mijarekê hilbijêrî û peyvan bixwazî, ew mijar jî ji Gemini re tê şandin. Nêrîn û ragihandinên peyvan ên ku tu wek mêvan dişînî jî bê nasnameya te li ser serverê tên hiştin. Hûrgilî di <a class="inl" href="/privacy/beje.html">polîtîkaya nihêniyê ya Android</a> de hene.</p>
 
         <h2>Jêbirin ji nav sepanê</h2>
         <ol class="legal-steps">
@@ -121,9 +137,23 @@
             <tr><td>Qeyda premiumê</td><td><span class="badge badge-danger">Jêbirina daîmî</span></td><td>Di cih de</td></tr>
             <tr><td>Geribûn û hejmarên bikaranîna bilêvkirinê</td><td><span class="badge badge-danger">Jêbirina daîmî</span></td><td>Di cih de</td></tr>
             <tr><td>Ragihandinên peyvan ên te şandine</td><td><span class="badge badge-warn">Navnîşana e-peyamê tê rakirin</span></td><td>Di cih de</td></tr>
-            <tr><td>Daneyên analîtîk</td><td><span class="badge badge-warn">Bê nasname tên hiştin</span></td><td>Herî zêde 90 roj</td></tr>
+            <tr><td>Daneyên analîtîk (Google Analytics)</td><td><span class="badge badge-warn">Bi hesabê ve ne girêdayî</span></td><td>Herî zêde 14 meh</td></tr>
+            <tr><td>Raporên têkçûnê (Firebase Crashlytics)</td><td><span class="badge badge-warn">Bi hesabê ve ne girêdayî</span></td><td>90 roj</td></tr>
+            <tr><td>Tomarên serverê (dibe ku nasnameya hesabê te tê de hebe)</td><td><span class="badge badge-warn">Bi xwe tên jêbirin</span></td><td>Nêzîkî 30 roj</td></tr>
+            <tr><td>Kopiyên daneyên jêbirî di yedekên (backup) Firebase de</td><td><span class="badge badge-warn">Bi xwe tên jêbirin</span></td><td>Herî zêde 180 roj</td></tr>
           </tbody>
         </table>
+
+        <h2>Daneyên ku bi jêbirina hesabê nayên jêbirin</h2>
+        <p>Daneyên jêrîn an bi hesabê te ve ne girêdayî ne, an jî ne li cem me ne. Ji ber vê yekê jêbirina hesabê wan ranake.</p>
+        <ul>
+          <li><strong>Nêrîn û ragihandinên peyvan ên ku wek mêvan hatine şandin:</strong> Bê nasnameya te tên tomarkirin. Em nizanin kîjan tomar ya te ye, ji ber vê yekê jêbirina hesabê wan ranake.</li>
+          <li><strong>Lêgerîn û mijarên ku ji Google Gemini re tên şandin:</strong> Peyvên ku ne di pirtûkxaneya te de ne û ne jî di ferhenga hevpar de ne, ji bo wergerê ji Gemini re tên şandin. Mijarên ku tu ji bo peyvên nû hildibijêrî jî ji Gemini re tên şandin. Dibe ku Google wan ji bo dîtina bikaranîna xerab demeke sînorkirî bihêle. Ev tomar li cem Google in, ne li cem me.</li>
+          <li><strong>Bîrgeha (cache) hevpar a ferhengê:</strong> Dema ku tu têketî yî, peyvên nû yên ku Gemini ji bo te çêdike û wergerên wan dikarin li bîrgeha ferhengê ya ku hemû bikarhêner bi kar tînin werin zêdekirin. Tu agahî li ser te tê de nîne. Heke te lêgerîn kiribe, nivîsa ku te lê geriyaye jî wek mifteya lêgerînê ya tomarê tê hiştin.</li>
+          <li><strong>Statîstîkên giştî:</strong> Raporên giştî yên wek hejmara bikarhênerên rojane bi tu kesî ve ne girêdayî ne. Dibe ku ji demên li jorê dirêjtir bên hiştin.</li>
+          <li><strong>Daneyên reklamê:</strong> Reklamên di guhertoya belaş de ji aliyê Google AdMob ve tên nîşandan. Daneyên reklamê yên ku Google berhev dike li gorî qaîdeyên Google bi xwe tên hiştin. Li Android tu dikarî nasnameya xwe ya reklamê ji mîhengên cihazê (<em>Google &gt; Reklam</em>) nû bikî an jê bibî.</li>
+          <li><strong>Yedeka telefona te:</strong> Heke yedekkirina telefona te vekirî be (li Android yedeka Google, li iPhone yedeka iCloud), dibe ku yedeka cihazê ya ku berî jêbirinê hatiye girtin demekê di hesabê te de bimîne. Dema ku tu sepanê ji nû ve saz bikî an telefona xwe ji wê yedekê vegerînî, dibe ku peyvên te yên berê vegerin. Em nikarin bigihîjin wê yedekê.</li>
+        </ul>
 
         <div class="legal-warning">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10.3 3.9 1.8 18a2 2 0 0 0 1.7 3h17a2 2 0 0 0 1.7-3L13.7 3.9a2 2 0 0 0-3.4 0Z"/><path d="M12 9v4M12 17h.01"/></svg>
@@ -135,7 +165,8 @@
       <div class="legal-body lang-section" id="lang-en">
         <h2>Account Deletion Request</h2>
         <p>Follow the steps below to permanently delete your Bêje account and the data linked to it. The steps are the same on Android and iPhone.</p>
-        <p><strong>If you use the app as a guest</strong>, you have no account; your data stays on your device only and is removed with <em>Settings &gt; Data &gt; Delete All Data</em> or by uninstalling the app.</p>
+        <p><strong>If you use the app as a guest</strong>, you have no account. Your learning data (words, lists, streak and progress) stays on your device. You can remove it with the <em>Delete All Data</em> option in Settings or by uninstalling the app. If your phone's backup is turned on (Google backup on Android, iCloud backup on iPhone), this data may also be copied to the device backup in your own account. It may come back if you reinstall the app or restore your phone from that backup. We cannot access that backup.</p>
+        <p>Some data is still collected from guests: device identifiers, approximate location derived from your IP address, usage data, and crash and diagnostic data. If a word you search for is not in your library or in the shared dictionary, it is sent to Google Gemini for translation. When you pick a topic to get new words, the topic is sent to Gemini too. Feedback and word reports you send as a guest are also stored on the server, without your identity. The <a class="inl" href="/privacy/beje.html">Android privacy policy</a> explains this in detail.</p>
 
         <h2>Deleting from inside the app</h2>
         <ol class="legal-steps">
@@ -163,9 +194,23 @@
             <tr><td>Premium record</td><td><span class="badge badge-danger">Permanent deletion</span></td><td>Immediately</td></tr>
             <tr><td>Feedback and pronunciation usage counters</td><td><span class="badge badge-danger">Permanent deletion</span></td><td>Immediately</td></tr>
             <tr><td>Word reports you sent</td><td><span class="badge badge-warn">Email address removed</span></td><td>Immediately</td></tr>
-            <tr><td>Analytics data</td><td><span class="badge badge-warn">Kept without identity</span></td><td>Up to 90 days</td></tr>
+            <tr><td>Analytics data (Google Analytics)</td><td><span class="badge badge-warn">Not linked to account</span></td><td>Up to 14 months</td></tr>
+            <tr><td>Crash reports (Firebase Crashlytics)</td><td><span class="badge badge-warn">Not linked to account</span></td><td>90 days</td></tr>
+            <tr><td>Server logs (may contain your account ID)</td><td><span class="badge badge-warn">Deleted automatically</span></td><td>About 30 days</td></tr>
+            <tr><td>Copies of deleted data in Firebase backups</td><td><span class="badge badge-warn">Deleted automatically</span></td><td>Up to 180 days</td></tr>
           </tbody>
         </table>
+
+        <h2>What account deletion does not remove</h2>
+        <p>The data below is either not linked to your account or not held by us, so deleting the account does not remove it.</p>
+        <ul>
+          <li><strong>Feedback and word reports sent as a guest:</strong> stored without your identity. We cannot tell which ones are yours, so account deletion does not remove them.</li>
+          <li><strong>Searches and topics sent to Google Gemini:</strong> words that are not in your library or in the shared dictionary are sent to Gemini for translation, and topics you pick for new words are sent to Gemini to generate them. Google may keep them for a limited time to detect abuse. These records are held by Google, not by us.</li>
+          <li><strong>Shared dictionary cache:</strong> new words that Gemini generates for you while you are signed in, and their translations, may be added to the dictionary cache that all users share. It contains no information about you. If you searched, the text you typed is also stored as the entry's lookup key.</li>
+          <li><strong>Aggregated statistics:</strong> reports such as daily user counts are not linked to anyone. They may be kept longer than the periods above.</li>
+          <li><strong>Advertising data:</strong> ads in the free version are served by Google AdMob. Advertising data collected by Google is kept under Google's own rules. On Android you can reset or delete your advertising ID in your device settings (<em>Google &gt; Ads</em>).</li>
+          <li><strong>Your phone's own backup:</strong> if your phone's backup is turned on (Google backup on Android, iCloud backup on iPhone), a device backup made before the deletion may stay in your own account for a while. If you reinstall the app or restore your phone from that backup, your old words may come back. We cannot access that backup.</li>
+        </ul>
 
         <div class="legal-warning">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10.3 3.9 1.8 18a2 2 0 0 0 1.7 3h17a2 2 0 0 0 1.7-3L13.7 3.9a2 2 0 0 0-3.4 0Z"/><path d="M12 9v4M12 17h.01"/></svg>
