@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Bêje — Gizlilik Politikası (iOS) | benav</title>
-  <meta name="description" content="Bêje — Kürtçe Öğren uygulaması gizlilik politikası (iOS ve Android).">
+  <meta name="description" content="Bêje — Kürtçe Öğren uygulaması gizlilik politikası (iOS).">
   <meta name="theme-color" content="#f7f6f3" media="(prefers-color-scheme: light)">
   <meta name="theme-color" content="#121316" media="(prefers-color-scheme: dark)">
   <link rel="stylesheet" href="/privacy/style.css">
@@ -38,7 +38,7 @@
       <div class="legal-head">
         <span class="eyebrow">Gizlilik Politikası</span>
         <h1>Bêje — Kürtçe Öğren</h1>
-        <p class="meta">Yürürlük tarihi: 11 Ağustos 2026 &nbsp;·&nbsp; Geçerli platformlar: iOS &nbsp;·&nbsp; <a class="inl" href="https://play.google.com/store/apps/details?id=com.sinan.bejeapp" target="_blank" rel="noopener">Google Play'de görüntüle</a></p>
+        <p class="meta">Yürürlük tarihi: 25 Eylül 2026 &nbsp;·&nbsp; Geçerli platform: iOS (iPhone ve iPad) &nbsp;·&nbsp; <a class="inl" href="https://apps.apple.com/us/app/b%C3%AAje-k%C3%BCrt%C3%A7e-%C3%B6%C4%9Fren/id6780462851" target="_blank" rel="noopener">App Store'da görüntüle</a></p>
       </div>
 
       <div class="legal-body">
@@ -49,13 +49,16 @@
         <h3>a) Hesap bilgileri (yalnızca giriş yaparsanız)</h3>
         <p>Uygulamayı <strong>misafir olarak</strong> hesapsız kullanabilirsiniz. Giriş yapmayı seçerseniz, kullandığınız yönteme göre şu bilgiler işlenir:</p>
         <ul>
-          <li>E-posta adresi (e-posta/şifre veya Google ile giriş)</li>
+          <li>E-posta adresi (e-posta/şifre, Google ile giriş veya Apple ile giriş)</li>
           <li>Görünen ad (isteğe bağlı olarak sizin belirlediğiniz)</li>
         </ul>
         <p>Kimlik doğrulama <strong>Google Firebase Authentication</strong> ile sağlanır.</p>
+        <p><strong>Apple ile giriş</strong> yaparken "E-postamı Gizle"yi seçerseniz gerçek adresinizi görmeyiz; hesabınız Apple'ın verdiği <em>@privaterelay.appleid.com</em> röle adresiyle oluşturulur ve bizdeki kimliğiniz o adres olur. Bu durumda size yalnızca o röle adresi üzerinden ulaşabiliriz.</p>
 
         <h3>b) Öğrenme verileri</h3>
         <p>Kelimeleriniz, çalışma ilerlemeniz, ustalık seviyeleri, seriler ve günlük hedefler. Bu veriler <strong>öncelikle cihazınızda</strong> saklanır. Giriş yaparsanız ve bulut yedeklemeyi kullanırsanız, bu veriler hesabınıza bağlı olarak <strong>Google Firebase (Firestore)</strong> üzerinde de saklanır (cihazlar arası senkronizasyon ve yedekleme için).</p>
+        <p>Yedeğe giren ilerleme alanları şunlardır: seri gününüz, son çalışma tarihiniz, günlük kelime hedefiniz, ilerlemenin son değişme zamanı, kutladığınız rozetler ve günün kelimesi geçmişi. Kelimeleriniz ve her kelimenin öğrenme durumu da yedeğe dahildir.</p>
+        <p>Giriş yaptığınızda ve giriş yapmış bir hesapla uygulamayı açtığınızda, buluttaki yedeğiniz <strong>sessizce okunur</strong>; bunun için ayrıca bir şey yapmanız gerekmez. Cihazınızda bulunmayan kelimeler yedekten geri eklenir — cihazdan sildiğiniz bir kelime bu yolla geri gelebilir. Cihazınızda zaten bulunan kelimelerde ve ilerleme kaydınızda ise buluttaki kayıt daha yeniyse güncelleme yapılır.</p>
 
         <h3>c) Yapay zeka (AI) arama metni</h3>
         <p>Bir kelimeyi "AI ile keşfet" özelliğiyle aradığınızda, girdiğiniz metin anlam/telaffuz/örnek cümle üretmek üzere <strong>Google Gemini API</strong>'ye gönderilir. Bu metni kişisel kimliğinizle ilişkilendirmeyiz.</p>
@@ -65,15 +68,19 @@
 
         <h3>e) Telaffuz sesi</h3>
         <p>Kelime telaffuzlarını dinlediğinizde, ilgili ses dosyası <strong>Google Firebase Storage</strong> üzerinden indirilir ve cihazınızda önbelleğe alınır. Bu işlem yalnızca kelimeye karşılık gelen ses dosyasını getirir; kişisel veri göndermez.</p>
+        <p>Bu ses dosyaları önceden üretilir: sunucumuz, sözlüğe yeni eklenen kelime ve örnek cümlelerin seslendirmesini oluşturmak için <strong>kurdishtts.com</strong> hizmetine yalnızca seslendirilecek metni gönderir. Bu isteklerde kullanıcı verisi bulunmaz.</p>
 
         <h3>f) Telaffuz pratiği ses kaydı (yalnızca premium, isteğe bağlı)</h3>
-        <p>Telaffuz Pratiği özelliğini kullandığınızda, mikrofon butonuna dokunmanızla kısa bir ses kaydı alınır (en fazla 30 saniye; konuşma bitince otomatik durur). Bu kayıt, söylediğiniz kelimenin yazıya çevrilmesi (konuşma tanıma / speech-to-text) için güvenli sunucumuz üzerinden <strong>kurdishtts.com</strong> hizmetine iletilir; dönen metin telaffuzunuzu değerlendirmek üzere cihazınızda karşılaştırılır. <strong>Ses kaydınızı saklamayız</strong> — kayıt yalnızca yazıya çevirme işlemi için iletilir ve işlem sonrası sunucumuzda tutulmaz; cihazdaki geçici kayıt dosyası da bir sonraki denemede silinir/üzerine yazılır. Adil kullanım için hesabınıza bağlı <strong>yalnızca günlük kullanım sayacı</strong> (kaç deneme yaptığınız) tutulur; sayaçla birlikte ses veya metin içeriği saklanmaz. Bu özellik yalnızca mikrofon izni verirseniz çalışır; izni istediğiniz zaman cihaz Ayarlarından geri alabilirsiniz. Özellik premium aboneliği ve oturum açmış bir hesap gerektirir.</p>
+        <p>Telaffuz Pratiği özelliğini kullandığınızda, mikrofon butonuna dokunmanızla kısa bir ses kaydı alınır (en fazla 30 saniye; konuşma bitince otomatik durur). Bu kayıt, söylediğiniz kelimenin yazıya çevrilmesi (konuşma tanıma / speech-to-text) için güvenli sunucumuz üzerinden <strong>kurdishtts.com</strong> hizmetine iletilir; dönen metin telaffuzunuzu değerlendirmek üzere cihazınızda karşılaştırılır. <strong>Ses kaydınızı saklamayız</strong> — kayıt yalnızca yazıya çevirme işlemi için iletilir ve işlem sonrası sunucumuzda tutulmaz. Cihazdaki geçici kayıt dosyası, deneme biter bitmez (başarılı da olsa, hata da alsa) silinir. Bu özellik yalnızca mikrofon izni verirseniz çalışır; izni istediğiniz zaman cihaz Ayarlarından geri alabilirsiniz. Özellik premium aboneliği ve oturum açmış bir hesap gerektirir.</p>
+        <p>Hizmete giden istekte kaydınız ve lehçe bilgisi ("kurmanji") bulunur; adınız, e-posta adresiniz ya da hesap kimliğiniz gitmez — istek sizin cihazınızdan değil, bizim sunucumuzdan gider.</p>
+        <p><strong>kurdishtts.com</strong>, 25 Eylül 2026 tarihli yazılı beyanında ses kaydını ve çevrilen metni işlem sonrasında saklamadığını, model eğitimi dahil başka hiçbir amaçla kullanmadığını bildirdi. Hizmet yalnızca faturalama için istek başına bir kullanım kaydı tutuyor (zaman, ses uzunluğu, dosya boyutu, lehçe, sonuç durumu ve çevrilen metnin karakter sayısı); bu kayıtta ses, metnin kendisi ya da sizi tanımlayan bir bilgi yok.</p>
+        <p>Adil kullanım için hesabınıza bağlı <strong>yalnızca günlük kullanım sayacı</strong> (kaç deneme yaptığınız) tutulur; sayaçla birlikte ses ya da metin içeriği tutulmaz. Bir istek başarısız olursa, sorunu teşhis edebilmek için hizmetin döndürdüğü hata yanıtı sunucu günlüklerimize yazılabilir; bu yanıt nadir durumlarda çevrilen metnin bir bölümünü içerebilir.</p>
 
         <h3>g) Reklam ve ölçüm verileri</h3>
-        <p>Uygulama, ücretsiz sürümde <strong>Google AdMob</strong> aracılığıyla reklam gösterebilir. AdMob, reklamların sunulması ve ölçülmesi için cihaz ve reklam tanımlayıcıları (ör. iOS'ta IDFA, Android'de Reklam Kimliği) gibi verileri işleyebilir. Ayrıca temel, çoğunlukla anonim kullanım istatistikleri için <strong>Firebase Analytics</strong> kullanılabilir.</p>
+        <p>Uygulama, ücretsiz sürümde <strong>Google AdMob</strong> aracılığıyla reklam gösterebilir. AdMob, reklamların sunulması ve ölçülmesi için cihaz verilerini işleyebilir; iOS'ta izleme izni hiç istenmediği için reklamlar her zaman kişiselleştirilmemiş olarak sunulur (bkz. 5. bölüm). Ayrıca temel, çoğunlukla anonim kullanım istatistikleri için <strong>Firebase Analytics</strong> kullanılabilir.</p>
 
         <h3>h) Abonelik ve satın alma durumu</h3>
-        <p>Premium (reklamsız ve sınırsız özellikler) için <strong>aylık veya yıllık otomatik yenilenen abonelik</strong> satın alabilirsiniz. Abonelik işlemi, yenilenmesi ve ücretlendirmesi ilgili mağaza (iOS'ta Apple App Store, Android'de Google Play) tarafından yönetilir; <strong>ödeme/kart bilgilerinizi biz görmeyiz veya saklamayız.</strong> Uygulama yalnızca aboneliğinizin etkin olup olmadığını öğrenir.</p>
+        <p>Premium (reklamsız ve sınırsız özellikler) için <strong>aylık veya yıllık otomatik yenilenen abonelik</strong> satın alabilirsiniz. Abonelik işlemi, yenilenmesi ve ücretlendirmesi <strong>Apple App Store</strong> tarafından yönetilir; <strong>ödeme/kart bilgilerinizi biz görmeyiz veya saklamayız.</strong> Giriş yaptıysanız, premium özelliklerin açılabilmesi için premium durumunuz (etkin olup olmadığı, ne zamandan beri etkin olduğu ve hangi mağazadan alındığı) hesap kimliğinize bağlı olarak sunucumuzda kaydedilir. Bu kayıt hesabınızı silmenizle birlikte silinir (bkz. 6. bölüm). Misafir kullanımda böyle bir kayıt oluşturulmaz.</p>
 
         <h2>2. Verileri Nasıl Kullanırız</h2>
         <ul>
@@ -89,20 +96,33 @@
         <h2>3. Üçüncü Taraf Hizmetler</h2>
         <p>Uygulama aşağıdaki üçüncü taraf hizmetleri kullanır; bu hizmetlerin kendi gizlilik politikaları geçerlidir:</p>
         <ul>
-          <li><strong>Google Firebase</strong> (Authentication, Firestore, Storage, Analytics, Remote Config) — <a class="inl" href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener">gizlilik politikası</a></li>
+          <li><strong>Google Firebase</strong> (Authentication, Firestore, Storage, Analytics, Remote Config, Crashlytics, Cloud Functions, App Check, Cloud Messaging) — <a class="inl" href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener">gizlilik politikası</a></li>
           <li><strong>Google Gemini API</strong> (AI kelime keşfi) — <a class="inl" href="https://ai.google.dev/gemini-api/terms" target="_blank" rel="noopener">kullanım şartları</a></li>
           <li><strong><a class="inl" href="https://kurdishtts.com" target="_blank" rel="noopener">kurdishtts.com</a></strong> (telaffuz pratiğinde konuşma tanıma / speech-to-text)</li>
           <li><strong>Google AdMob</strong> (reklam) — <a class="inl" href="https://policies.google.com/technologies/ads" target="_blank" rel="noopener">reklam politikası</a></li>
           <li><strong>Apple</strong> (iOS'ta App Store / abonelik) — <a class="inl" href="https://www.apple.com/legal/privacy/" target="_blank" rel="noopener">gizlilik politikası</a></li>
-          <li><strong>Google Play</strong> (Android'de abonelik) — <a class="inl" href="https://policies.google.com/privacy" target="_blank" rel="noopener">gizlilik politikası</a></li>
         </ul>
         <p>Verilerinizi bu hizmetlerin işlevleri dışında üçüncü taraflara <strong>satmayız</strong>.</p>
 
         <h2>4. Veri Saklama ve Senkronizasyon</h2>
         <ul>
-          <li>Giriş yapmazsanız verileriniz yalnızca cihazınızda kalır; uygulamayı silerseniz bu veriler de silinir.</li>
+          <li>Giriş yapmazsanız <strong>öğrenme verileriniz</strong> (kelimeleriniz, ilerlemeniz) yalnızca cihazınızda kalır; uygulamayı silerseniz bunlar da silinir. Bu, misafir kullanımda hiçbir şeyin cihazdan çıkmadığı anlamına gelmez: misafirken de ölçüm, hata raporlama, reklam ve uygulama doğrulama verileri işlenir (yukarıdaki g maddesi), "AI ile keşfet" aramanız Google Gemini'ye gider, gönderdiğiniz geri bildirim ve kelime bildirimleri sunucumuzda saklanır (kimliğiniz yerine "anonymous"/"guest" ile) ve uygulama, yayınlanan genel duyuruları okumak için sunucumuza bağlanır.</li>
           <li>Giriş yapar ve yedeklerseniz verileriniz hesabınıza bağlı olarak bulutta saklanır ve hesabınızı silene kadar tutulur.</li>
           <li>Ortak sözlüğe eklenen kelimeler genel sözlük içeriği olduğundan kimliğinizle ilişkilendirilmez ve hesap silme işleminden bağımsız olarak ortak sözlükte kalabilir.</li>
+        </ul>
+
+        <h3>Hesabınıza bağlı olmayan ya da kendi süresi dolunca silinen veriler</h3>
+        <p>Aşağıdaki veriler hesap silme ile hemen silinmez; hesabınıza bağlı değildir ya da süresi dolunca kendiliğinden silinir:</p>
+        <ul>
+          <li><strong>Google Analytics:</strong> Kullanıcı ve etkinlik düzeyindeki veriler en fazla 14 ay saklanır. Günlük kullanıcı sayısı gibi kimseyle ilişkilendirilmeyen toplu raporlar daha uzun tutulabilir.</li>
+          <li><strong>Çökme raporları (Crashlytics):</strong> 90 gün saklanır.</li>
+          <li><strong>Sunucu kayıtları:</strong> Sunucumuzun çalışma kayıtları hesap kimliğinizi içerebilir; yaklaşık 30 gün saklanır.</li>
+          <li><strong>Firebase yedekleri:</strong> Silinen verilerin Firebase'in kendi yedeklerinden tamamen kalkması 180 güne kadar sürebilir.</li>
+          <li><strong>Reklam verileri:</strong> AdMob'a giden veriler Google'ın kendi saklama sürelerine tabidir.</li>
+          <li><strong>Kelime bildirimleri:</strong> E-posta adresiniz kaldırılır; bildirilen kelime, çevirisi ve kategorisi kimliksiz olarak kalır.</li>
+          <li><strong>Ortak sözlük:</strong> Gemini'nin ürettiği ve ortak sözlüğe eklenen kelime kayıtları kimliğinizi içermez; hesap silmeyle silinmez.</li>
+          <li><strong>Gemini'ye gönderilen aramalar ve konular:</strong> Google bunları kötüye kullanımı tespit etmek için sınırlı bir süre saklayabilir.</li>
+          <li><strong>iPhone yedeğiniz:</strong> iCloud yedeği açıksa, silmeden önce alınmış cihaz yedeğiniz kendi Apple hesabınızda bir süre kalabilir; uygulamayı yeniden yükler ya da telefonunuzu bu yedekten geri yüklerseniz eski verileriniz geri gelebilir. Bu yedeğe biz erişemeyiz.</li>
         </ul>
 
         <h2>5. Reklamlar ve İzleme (iOS)</h2>
@@ -111,8 +131,13 @@
         <h2>6. Haklarınız ve Hesap Silme</h2>
         <ul>
           <li>Verilerinize uygulama içinden erişebilirsiniz.</li>
-          <li><strong>Hesabınızı ve buluttaki verilerinizi uygulama içinden silebilirsiniz</strong> (Ayarlar → Hesabımı Sil). Bu işlem hesabınızı ve ilişkili bulut verilerinizi (hesabınıza bağlı kelimeler ve ilerleme) kalıcı olarak kaldırır ve geri alınamaz. Kimliğinizle ilişkili olmayan ortak sözlük kayıtları bundan etkilenmez.</li>
-          <li>Dilerseniz <a class="inl" href="mailto:info@benav.com.tr">info@benav.com.tr</a> adresinden bizimle iletişime geçerek veri erişimi/silme talebinde bulunabilirsiniz.</li>
+          <li><strong>Uygulama içinden silme:</strong> <em>Ayarlar &gt; Hesabımı Sil</em>. İşlem anında yapılır ve geri alınamaz; internet bağlantısı gerekir. Şunlar kalıcı olarak silinir: hesabınız, buluttaki kelime yedeğiniz ve hesap kaydınız (bildirim belirteci dahil), premium kaydınız ve cihazınızdaki öğrenme verileri — kelimeler, listeler, ilerleme, seri ve hedef sayaçları, profil adınız ve fotoğrafınız, rozet kutlamaları, can durumu. Sunucumuz ayrıca hesabınıza bağlı geri bildirimleri ve telaffuz kullanım sayaçlarını siler, gönderdiğiniz kelime bildirimlerinden e-posta adresinizi kaldırır.</li>
+          <li><strong>Son girişinizden 5 dakikadan fazla geçtiyse hiçbir şey silinmez:</strong> güvenlik gereği işlem baştan durur ve çıkış yapıp yeniden giriş yapmanız istenir. Böylece "verim gitti ama hesabım duruyor" gibi yarım bir durum oluşmaz.</li>
+          <li><strong>Cihazda kalanlar:</strong> Öğrenme verileriniz silinir, ancak bazı cihaz ayarları ve sayaçları kalır: tema, günlük hedef değeri, hatırlatma ve bildirim ayarları, seçili telaffuz sesi, günlük yapay zeka kota sayacı, toplu indirme sayaçları, kapatmış olduğunuz duyurular ve yarım kalmış bir telaffuz oturumu. İndirilmiş telaffuz ses dosyaları da önbellekte kalır; bunlar herkese açık dosyalardır, kişisel veri içermez. Uygulamayı kaldırırsanız bunlar da gider.</li>
+          <li><strong>Aboneliğiniz varsa:</strong> Hesabı silmek aboneliği durdurmaz. <em>Ayarlar &gt; Apple Kimliği &gt; Abonelikler</em> bölümünden ayrıca iptal etmeniz gerekir.</li>
+          <li><strong>Uygulama dışından silme talebi:</strong> Uygulamaya erişemiyorsanız, hesabınıza kayıtlı e-posta adresinden <a class="inl" href="mailto:info@benav.com.tr">info@benav.com.tr</a> adresine "Hesap silme talebi" konulu bir e-posta gönderebilirsiniz. Hesabın size ait olduğunu doğruladıktan sonra talebiniz en geç 30 gün içinde yerine getirilir.</li>
+          <li>Adım adım anlatım: <a class="inl" href="/privacy/beje-hesap-silme.html">Hesap ve veri silme sayfası</a>.</li>
+          <li>Kimliğinizle ilişkili olmayan ortak sözlük kayıtları hesap silmeden etkilenmez (bkz. 4. bölüm).</li>
         </ul>
 
         <h2>7. Çocukların Gizliliği</h2>
