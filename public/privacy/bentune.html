@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BenTune Gizlilik Politikası | benav</title>
+  <meta name="description" content="BenTune (iOS ve Android) gizlilik politikası: mikrofon yalnızca cihaz üzerinde, anlık perde analizi için kullanılır; ses kaydedilmez, veri toplanmaz ve hiçbir yere gönderilmez.">
+  <link rel="canonical" href="https://benav.com.tr/privacy/bentune.html">
+  <meta name="theme-color" content="#f7f6f3" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#121316" media="(prefers-color-scheme: dark)">
+  <link rel="icon" type="image/png" href="/icons/benav.png">
+  <link rel="apple-touch-icon" href="/icons/benav.png">
+  <link rel="stylesheet" href="/privacy/style.css">
+  <script>(function(){var t=null;try{t=localStorage.getItem('benav-theme');}catch(e){}if(t!=='dark'&&t!=='light'){t=window.matchMedia&&window.matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light';}document.documentElement.setAttribute('data-theme',t);})();</script>
+  <style>
+    /* Açık temada soluk metin kontrastını WCAG AA düzeyine çeker (yalnız bu sayfa). */
+    :root:not([data-theme="dark"]) { --text-mute: #66645d; }
+    .skip { position: absolute; left: 16px; top: -60px; z-index: 100; padding: 10px 16px; border-radius: 10px; background: var(--accent); color: var(--accent-ink); font-weight: 700; }
+    .skip:focus { top: 12px; }
+    a:focus-visible, button:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; border-radius: 6px; }
+    .theme-toggle[hidden] { display: none; }
+    .legal-body .ozet { padding: 16px 18px; margin: 0 0 32px; border-left: 3px solid var(--accent); border-radius: 0 12px 12px 0; background: var(--accent-tint); }
+    .legal-body .ozet strong { color: var(--text); }
+    .tablo { overflow-x: auto; margin: 0 0 14px; }
+    .legal-table th[scope="row"] { color: var(--text); font-size: .96rem; letter-spacing: 0; text-transform: none; font-weight: 700; }
+    @media (max-width: 480px) { .legal-table th, .legal-table td { padding: 10px 8px; } }
+    .footer-bottom a { text-decoration: underline; text-underline-offset: 2px; }
+  </style>
+</head>
+<body>
+  <a class="skip" href="#icerik">İçeriğe geç</a>
+
+  <header class="nav">
+    <div class="wrap">
+      <span class="brand"><span class="mark" aria-hidden="true"></span>benav</span>
+      <button class="theme-toggle" id="tema-dugmesi" type="button" aria-label="Koyu temaya geç" hidden>
+        <svg class="i-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 14.5A8 8 0 1 1 9.5 4a6.5 6.5 0 0 0 10.5 10.5Z"/></svg>
+        <svg class="i-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 3v2M12 19v2M3 12h2M19 12h2M5.6 5.6l1.4 1.4M17 17l1.4 1.4M5.6 18.4 7 17M17 7l1.4-1.4"/></svg>
+      </button>
+    </div>
+  </header>
+
+  <main id="icerik" class="legal">
+    <div class="wrap">
+      <header class="legal-head">
+        <span class="eyebrow">Gizlilik Politikası</span>
+        <h1>BenTune Gizlilik Politikası</h1>
+        <p class="meta">iOS ve Android&nbsp;· Yürürlük tarihi: <time datetime="2026-09-26">26 Eylül 2026</time>&nbsp;· Geliştirici: benav</p>
+      </header>
+
+      <div class="legal-body">
+        <p class="ozet"><strong>Kısaca:</strong> BenTune çaldığınız sesi yalnızca telefonunuzun içinde ve o anda analiz eder. Ses kaydedilmez, saklanmaz ve hiçbir yere gönderilmez. Uygulamanın internet bağlantısı, hesabı, reklamı, analitiği ya da üçüncü taraf yazılım kiti (SDK) yoktur. Ayarlarınız ve oluşturduğunuz özel enstrümanlar yalnızca cihazınızda durur.</p>
+
+        <h2>Bu politika neyi kapsar?</h2>
+        <p>Bu metin, benav tarafından geliştirilen BenTune enstrüman akort uygulamasının iOS ve Android sürümleri için geçerlidir. İki sürüm de bilgilerinizi aynı biçimde ele alır; platforma göre değişen noktalar ayrıca belirtilmiştir.</p>
+
+        <h2>Mikrofon ve ses</h2>
+        <ul>
+          <li>BenTune, enstrümanınızın hangi notayı çaldığını ve akordun ne kadar saptığını gösterebilmek için mikrofonu kullanır.</li>
+          <li>Mikrofon yalnızca siz uygulamada dinlemeyi başlattığınızda devreye girer; dinlemeyi aynı düğmeyle istediğiniz an durdurabilirsiniz.</li>
+          <li>Mikrofondan gelen ses, cihazın belleğinde kısa parçalar hâlinde gerçek zamanlı olarak işlenir. Her parçadan yalnızca perde (frekans) bilgisi çıkarılır; ses parçası işlendikten sonra tutulmaz.</li>
+          <li>Ses kaydedilmez, dosyaya yazılmaz ve cihazın dışına çıkmaz. benav dahil hiç kimse bu sese erişemez.</li>
+          <li>Mikrofon kullanılırken iPhone'da ekranın üst kısmında turuncu bir nokta, Android 12 ve sonraki sürümlerde ise bir mikrofon göstergesi belirir. Bu, işletim sisteminin kendi uyarısıdır.</li>
+        </ul>
+
+        <h2>Uygulamada bulunmayanlar</h2>
+        <ul>
+          <li><strong>İnternet bağlantısı yok.</strong> Uygulama hiçbir sunucuya bağlanmaz. Android sürümü internet izni de istemez; istediği tek izin mikrofondur.</li>
+          <li><strong>Hesap yok.</strong> Kayıt olmanız, giriş yapmanız ya da ad, e-posta, telefon gibi bilgiler vermeniz gerekmez.</li>
+          <li><strong>Analitik ve izleme yok.</strong> Kullanım istatistiği tutulmaz, reklam kimliği okunmaz, sizi başka uygulama ya da sitelerde izleyen bir mekanizma yoktur.</li>
+          <li><strong>Reklam yok.</strong></li>
+          <li><strong>Üçüncü taraf SDK yok.</strong> Uygulamada reklam, analitik, çökme raporlama ya da başka bir amaçla veri toplayan bir şirketin yazılım kiti bulunmaz.</li>
+        </ul>
+        <p>Bu nedenle benav, uygulama üzerinden sizinle ilgili hiçbir kişisel veri toplamaz, saklamaz ve kimseyle paylaşmaz.</p>
+        <p>Cihazınızın ayarlarında tanılama verilerinin uygulama geliştiricileriyle paylaşılmasına izin verdiyseniz, Apple ya da Google, uygulama çöktüğünde oluşan teknik raporları (ör. cihaz modeli, sistem sürümü, hatanın oluştuğu kod konumu) kendi geliştirici panelleri üzerinden bize iletebilir. Bu raporları işletim sistemi oluşturur; ses ya da kişisel içerik barındırmazlar ve yalnızca hataları gidermek için kullanılır. Bu paylaşımı cihaz ayarlarınızdan kapatabilirsiniz.</p>
+
+        <h2>Cihazınızda saklanan bilgiler</h2>
+        <p>Hangi bilginin nerede tutulduğu aşağıdadır. Ayarlarınız ve seçimleriniz, uygulamayı yeniden açtığınızda kaldığınız yerden devam edebilmeniz için saklanır:</p>
+        <div class="tablo">
+          <table class="legal-table">
+            <thead>
+              <tr><th scope="col">Bilgi</th><th scope="col">Nerede tutulur?</th></tr>
+            </thead>
+            <tbody>
+              <tr><th scope="row">Mikrofon sesi</th><td>Hiçbir yerde; yalnızca anlık analiz</td></tr>
+              <tr><th scope="row">Ayarlar (A4 kalibrasyonu, mikrofon hassasiyeti, tema, yüksek kontrast)</th><td>Yalnızca cihazınızda</td></tr>
+              <tr><th scope="row">Son seçtiğiniz enstrüman ve akort düzeni</th><td>Yalnızca cihazınızda</td></tr>
+              <tr><th scope="row">Oluşturduğunuz özel enstrümanlar</th><td>Yalnızca cihazınızda</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p>Bu bilgilerin hiçbiri benav'a ya da başka birine gönderilmez. Uygulamayı sildiğinizde cihazdaki bu bilgiler de silinir. Android'de uygulamayı silmeden temizlemek için <em>Ayarlar › Uygulamalar › BenTune › Depolama</em> bölümündeki verileri temizleme seçeneğini kullanabilirsiniz (menü adları cihaza göre biraz farklı olabilir).</p>
+
+        <h2>İşletim sisteminin yedekleri</h2>
+        <p>iPhone'da iCloud Yedekleme (ya da bilgisayara yedekleme), Android'de Android Otomatik Yedekleme açıksa, yukarıdaki ayarlar ve özel enstrümanlar cihazınızın yedeğine dahil edilebilir; yeni bir cihaza geçtiğinizde bu sayede geri gelirler. Bu yedeklemeyi uygulama değil, işletim sistemi Apple ya da Google hesabınız üzerinden yapar ve ilgili şirketin koşullarına tabidir. benav bu yedeklere erişemez. Ses hiçbir zaman saklanmadığı için yedeklere de girmez. Yedeklemeyi cihazınızın ayarlarından yönetebilir ya da kapatabilirsiniz.</p>
+
+        <h2>Bu sayfalar ve e-posta yazışmaları</h2>
+        <p>Uygulamadaki <em>Gizlilik Politikası</em> ve <em>Destek ve Geri Bildirim</em> satırları, bu sayfaları cihazınızın tarayıcısında açar; uygulama bu sırada hiçbir bilgi göndermez. Web sayfalarımızı görüntülediğinizde, sayfanın size ulaştırılabilmesi için web sitesinin barındırma ve yazı tipi hizmeti sağlayıcıları IP adresi gibi standart bağlantı bilgilerini işler. Bu, uygulamanın kendisinden bağımsızdır.</p>
+        <p>Bize e-posta gönderirseniz, e-posta adresinizi ve mesajınızda kendi isteğinizle paylaştığınız bilgileri (ör. cihaz modeli, uygulama sürümü) yalnızca talebinizi yanıtlamak için kullanırız. Bu bilgileri başka bir amaçla kullanmaz, kimseyle paylaşmayız; yazışmanın silinmesini istediğinizde sileriz.</p>
+
+        <h2>Çocuklar</h2>
+        <p>BenTune her yaştan kullanıcıya uygundur. Uygulama, çocuklar dahil hiç kimseden kişisel veri toplamaz. 13 yaşından küçük çocuklardan bilerek kişisel bilgi almayız; bir çocuğun bize e-postayla kişisel bilgi gönderdiğini düşünüyorsanız <a class="inl" href="mailto:info@benav.com.tr">info@benav.com.tr</a> adresine yazın, bu bilgileri sileriz. Ebeveynler mikrofon iznini aşağıda anlatıldığı gibi istedikleri zaman kapatabilir.</p>
+
+        <h2>Mikrofon iznini değiştirme</h2>
+        <p>Mikrofon iznini istediğiniz zaman verebilir ya da geri alabilirsiniz:</p>
+        <ul>
+          <li><strong>iOS:</strong> <em>Ayarlar › BenTune › Mikrofon</em> anahtarını açın ya da kapatın. Aynı ayara <em>Ayarlar › Gizlilik ve Güvenlik › Mikrofon</em> yolundan da ulaşabilirsiniz.</li>
+          <li><strong>Android:</strong> <em>Ayarlar › Uygulamalar › BenTune › İzinler › Mikrofon</em> yolunda izni verin ya da kaldırın. Menü adları cihaz üreticisine ve Android sürümüne göre biraz farklı olabilir.</li>
+        </ul>
+        <p>İzin kapalıyken akort özelliği sesi duyamaz; metronom, çember ve akor rehberi mikrofonsuz çalışmaya devam eder.</p>
+
+        <h2>KVKK ve GDPR kapsamındaki haklarınız</h2>
+        <p>6698 sayılı Kişisel Verilerin Korunması Kanunu (KVKK) ve Avrupa Birliği Genel Veri Koruma Tüzüğü (GDPR) kapsamında; kişisel verilerinizin işlenip işlenmediğini öğrenme, işlendiyse bilgi ve kopya isteme, düzeltilmesini ya da silinmesini isteme, işlenmesine itiraz etme ve verilerinizin aktarılmasını isteme haklarına sahipsiniz.</p>
+        <p>BenTune kişisel veri toplamadığı için benav'ın elinde uygulamayı kullanımınıza dair bir kayıt bulunmaz. Cihazınızdaki bilgiler tamamen sizin denetiminizdedir ve yukarıda anlatıldığı gibi dilediğiniz an silinebilir. Bize e-posta yazdıysanız, yazışmanızla ilgili bu haklarınızı <a class="inl" href="mailto:info@benav.com.tr">info@benav.com.tr</a> adresine başvurarak kullanabilirsiniz; başvurunuzu en geç 30 gün içinde yanıtlarız.</p>
+        <p>Türkiye'de Kişisel Verileri Koruma Kurulu'na, Avrupa Birliği'nde ise bulunduğunuz ülkenin veri koruma otoritesine şikâyette bulunma hakkınız saklıdır.</p>
+
+        <h2>Politikadaki değişiklikler</h2>
+        <p>Uygulamaya internet bağlantısı, veri toplama ya da yeni bir izin eklenirse bu sayfayı, söz konusu sürüm yayımlanmadan önce güncelleriz. Güncel metin her zaman bu adrestedir ve yürürlük tarihi sayfanın başında yazar.</p>
+
+        <h2>İletişim</h2>
+        <p>Bu politika ya da verileriniz hakkındaki sorularınız için <a class="inl" href="mailto:info@benav.com.tr">info@benav.com.tr</a> adresine yazabilirsiniz. Kullanımla ilgili yardım için <a class="inl" href="/destek/bentune.html">BenTune Destek</a> sayfasına bakın.</p>
+      </div>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="wrap">
+      <div class="footer-bottom">
+        <span>© 2026 benav · BenTune</span>
+        <span><a href="/privacy/bentune.html" aria-current="page">Gizlilik Politikası</a>&nbsp;· <a href="/destek/bentune.html">Destek</a></span>
+      </div>
+    </div>
+  </footer>
+
+  <script>(function(){var root=document.documentElement,btn=document.getElementById('tema-dugmesi');if(!btn)return;function etiket(){btn.setAttribute('aria-label',root.getAttribute('data-theme')==='dark'?'Açık temaya geç':'Koyu temaya geç');}btn.hidden=false;etiket();btn.addEventListener('click',function(){var yeni=root.getAttribute('data-theme')==='dark'?'light':'dark';root.setAttribute('data-theme',yeni);try{localStorage.setItem('benav-theme',yeni);}catch(e){}etiket();});})();</script>
+</body>
+</html>

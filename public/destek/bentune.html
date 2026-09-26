@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BenTune Destek | benav</title>
+  <meta name="description" content="BenTune destek sayfası: mikrofon iznini yeniden açma, referans ses ve akort ipuçları hakkında sık sorulan sorular ile iletişim bilgisi.">
+  <link rel="canonical" href="https://benav.com.tr/destek/bentune.html">
+  <meta name="theme-color" content="#f7f6f3" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#121316" media="(prefers-color-scheme: dark)">
+  <link rel="icon" type="image/png" href="/icons/benav.png">
+  <link rel="apple-touch-icon" href="/icons/benav.png">
+  <link rel="stylesheet" href="/privacy/style.css">
+  <script>(function(){var t=null;try{t=localStorage.getItem('benav-theme');}catch(e){}if(t!=='dark'&&t!=='light'){t=window.matchMedia&&window.matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light';}document.documentElement.setAttribute('data-theme',t);})();</script>
+  <style>
+    /* Açık temada soluk metin kontrastını WCAG AA düzeyine çeker (yalnız bu sayfa). */
+    :root:not([data-theme="dark"]) { --text-mute: #66645d; }
+    .skip { position: absolute; left: 16px; top: -60px; z-index: 100; padding: 10px 16px; border-radius: 10px; background: var(--accent); color: var(--accent-ink); font-weight: 700; }
+    .skip:focus { top: 12px; }
+    a:focus-visible, button:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; border-radius: 6px; }
+    .theme-toggle[hidden] { display: none; }
+    .legal-body .eposta { font-size: 1.15rem; font-weight: 700; overflow-wrap: anywhere; }
+    .footer-bottom a { text-decoration: underline; text-underline-offset: 2px; }
+  </style>
+</head>
+<body>
+  <a class="skip" href="#icerik">İçeriğe geç</a>
+
+  <header class="nav">
+    <div class="wrap">
+      <span class="brand"><span class="mark" aria-hidden="true"></span>benav</span>
+      <button class="theme-toggle" id="tema-dugmesi" type="button" aria-label="Koyu temaya geç" hidden>
+        <svg class="i-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 14.5A8 8 0 1 1 9.5 4a6.5 6.5 0 0 0 10.5 10.5Z"/></svg>
+        <svg class="i-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="12" cy="12" r="4"/><path d="M12 3v2M12 19v2M3 12h2M19 12h2M5.6 5.6l1.4 1.4M17 17l1.4 1.4M5.6 18.4 7 17M17 7l1.4-1.4"/></svg>
+      </button>
+    </div>
+  </header>
+
+  <main id="icerik" class="legal">
+    <div class="wrap">
+      <header class="legal-head">
+        <span class="eyebrow">Destek ve Geri Bildirim</span>
+        <h1>BenTune Destek</h1>
+        <p class="meta">iOS ve Android&nbsp;· Sık sorulan sorular ve iletişim</p>
+      </header>
+
+      <div class="legal-body">
+        <p>Aşağıda en sık sorulan soruların yanıtlarını bulabilirsiniz. Burada yanıtı olmayan bir sorunuz, bildirmek istediğiniz bir hata ya da bir öneriniz varsa bize e-postayla ulaşabilirsiniz.</p>
+
+        <h2>Sık sorulan sorular</h2>
+
+        <h3>Mikrofon iznini reddettim. Nasıl yeniden açarım?</h3>
+        <p>İzni bir kez reddettiğinizde işletim sistemi izin penceresini yeniden göstermeyebilir. Bu durumda izni cihazın ayarlarından açın:</p>
+        <ul>
+          <li><strong>iOS:</strong> <em>Ayarlar › BenTune › Mikrofon</em> anahtarını açın.</li>
+          <li><strong>Android:</strong> <em>Ayarlar › Uygulamalar › BenTune › İzinler › Mikrofon</em> yolunda izin verin. Menü adları cihaz üreticisine ve Android sürümüne göre biraz farklı olabilir.</li>
+        </ul>
+        <p>Ardından BenTune'a dönüp dinlemeyi yeniden başlatın. Android 12 ve sonrasında, Hızlı Ayarlar'daki <em>Mikrofon erişimi</em> kutucuğu kapalıysa izin verilmiş olsa bile hiçbir uygulama mikrofonu kullanamaz; bu kutucuğun açık olduğundan da emin olun.</p>
+
+        <h3>Uygulama sesimi algılamıyor ya da gösterge kararsız.</h3>
+        <ul>
+          <li>Dinlemenin açık olduğundan emin olun.</li>
+          <li>Telefonun mikrofon deliğinin kılıf ya da parmağınızla kapanmadığını kontrol edin ve telefonu enstrümana yaklaştırın.</li>
+          <li>Telleri tek tek çalın; birden fazla tel aynı anda tınlarsa gösterge kararsızlaşır.</li>
+          <li><em>Ayarlar › Mikrofon Hassasiyeti</em> ayarını ortamınıza göre değiştirin: sesiniz algılanmıyorsa hassasiyeti artırın, gürültülü bir ortamda çevre sesleri araya giriyorsa azaltın.</li>
+        </ul>
+
+        <h3>Dinleme açıkken referans ses neden daha kısık çıkıyor?</h3>
+        <p>Dinleme açıkken telefon, enstrümanınızı olabildiğince temiz duyabilmek için mikrofona göre ayarlanmış bir ses moduna geçer. Bu modda, özellikle iPhone'da, sistemin kendi ses işlemesi devre dışı kalır ve hoparlörden çıkan ses normalden daha kısık duyulabilir. Bu beklenen bir durumdur; referans sesin perdesi değişmez ve akordun doğruluğu etkilenmez. Sesi daha rahat duymak için telefonun ses düzeyini artırabilirsiniz.</p>
+
+        <h3>Referans sesi nasıl çalarım?</h3>
+        <p>Akort ekranında bir tele dokunduğunuzda o tel hedef olarak kilitlenir ve doğru perdesi referans ses olarak çalınır. Aynı tele yeniden dokunduğunuzda uygulama otomatik algılamaya döner.</p>
+
+        <h3>A4 kalibrasyonunu ne zaman değiştirmeliyim?</h3>
+        <p>Varsayılan değer 440 Hz'dir ve çoğu durumda doğrudur. Birlikte çaldığınız topluluk ya da eşlik ettiğiniz kayıt farklı bir referans kullanıyorsa, <em>Ayarlar › A4 Kalibrasyonu</em> bölümünden 432–446 Hz arasında bir değer seçebilirsiniz. Birlikte çaldığınız herkesin aynı değeri kullanması önemlidir.</p>
+
+        <h3>Ayarlar ekranına nereden ulaşırım?</h3>
+        <p>Sol üstteki menüyü (☰) açın ve <em>Ayarlar</em>'a dokunun. Uygulamanın sürüm bilgisi bu ekranın en altında yazar.</p>
+
+        <h2>Akort için ipuçları</h2>
+        <ul>
+          <li>Mümkün olduğunca sessiz bir ortamda akort edin ve telefonu enstrümanın gövdesine ya da ses deliğine yakın tutun.</li>
+          <li>Önce doğru enstrümanı ve akort düzenini seçin. Aradığınız düzen listede yoksa otomatik algılama çaldığınız her notayı gösterir.</li>
+          <li>Tele sert vurmayın. Güçlü bir vuruş ilk anda perdeyi hafifçe tizleştirir; göstergeyi ses oturduktan sonra okuyun.</li>
+          <li>Notaya aşağıdan yaklaşın: tel tizse önce biraz gevşetin, sonra hedef notaya doğru gerin. Burgu böylece yerine daha iyi oturur ve akort daha uzun süre korunur.</li>
+          <li>Bütün telleri bitirdikten sonra bir tur daha kontrol edin. Bir telin gerginliği değiştiğinde sap ve öbür teller de biraz etkilenebilir.</li>
+          <li>Yeni takılan teller birkaç gün boyunca esner; bu sürede akordu daha sık kontrol edin.</li>
+        </ul>
+
+        <h2>Verileriniz</h2>
+        <p>BenTune ses kaydetmez, internete bağlanmaz ve kişisel veri toplamaz. Ayrıntılar için <a class="inl" href="/privacy/bentune.html">BenTune Gizlilik Politikası</a> sayfasına bakın.</p>
+
+        <h2>Bize ulaşın</h2>
+        <p class="eposta"><a class="inl" href="mailto:info@benav.com.tr?subject=BenTune%20Destek&amp;body=Uygulama%20s%C3%BCr%C3%BCm%C3%BC%20%28Ayarlar%20ekran%C4%B1n%C4%B1n%20en%20alt%C4%B1nda%29%3A%0ACihaz%20modeli%20ve%20sistem%20s%C3%BCr%C3%BCm%C3%BC%3A%0ASorun%20ya%20da%20%C3%B6neri%3A%0A">info@benav.com.tr</a></p>
+        <p>Bir sorun bildirirken şu bilgileri eklerseniz size daha hızlı yardımcı olabiliriz:</p>
+        <ul>
+          <li><strong>Uygulama sürümü:</strong> sol üstteki menüden (☰) <em>Ayarlar</em>'ı açın; sürüm bilgisi ekranın en altında, “v” harfiyle başlayan satırda yazar.</li>
+          <li><strong>Cihaz:</strong> telefonunuzun modeli ve iOS ya da Android sürümü.</li>
+          <li><strong>Sorun:</strong> ne yaptığınızda ortaya çıktığı, seçili enstrüman ve akort düzeni.</li>
+        </ul>
+        <p>Öneri ve geri bildirimlerinizi de aynı adrese bekliyoruz. E-postanızdaki bilgileri yalnızca size yanıt vermek için kullanırız.</p>
+      </div>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="wrap">
+      <div class="footer-bottom">
+        <span>© 2026 benav · BenTune</span>
+        <span><a href="/privacy/bentune.html">Gizlilik Politikası</a>&nbsp;· <a href="/destek/bentune.html" aria-current="page">Destek</a></span>
+      </div>
+    </div>
+  </footer>
+
+  <script>(function(){var root=document.documentElement,btn=document.getElementById('tema-dugmesi');if(!btn)return;function etiket(){btn.setAttribute('aria-label',root.getAttribute('data-theme')==='dark'?'Açık temaya geç':'Koyu temaya geç');}btn.hidden=false;etiket();btn.addEventListener('click',function(){var yeni=root.getAttribute('data-theme')==='dark'?'light':'dark';root.setAttribute('data-theme',yeni);try{localStorage.setItem('benav-theme',yeni);}catch(e){}etiket();});})();</script>
+</body>
+</html>
