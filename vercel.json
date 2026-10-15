@@ -11,6 +11,14 @@
     {
       "source": "/ios",
       "destination": "/ios.html"
+    },
+    {
+      "source": "/katil/:kod",
+      "destination": "/katil.html"
+    },
+    {
+      "source": "/katil",
+      "destination": "/katil.html"
     }
   ]
 }
