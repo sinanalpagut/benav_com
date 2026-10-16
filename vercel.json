@@ -19,6 +19,10 @@
     {
       "source": "/katil",
       "destination": "/katil.html"
+    },
+    {
+      "source": "/destek/insaat-takip",
+      "destination": "/destek/insaat-takip.html"
     }
   ]
 }
