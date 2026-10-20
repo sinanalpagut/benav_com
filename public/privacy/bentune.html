@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>BenTune Gizlilik Politikası | benav</title>
-  <meta name="description" content="BenTune (iOS ve Android) gizlilik politikası: mikrofon yalnızca cihaz üzerinde, anlık perde analizi için kullanılır; ses kaydedilmez, veri toplanmaz ve hiçbir yere gönderilmez.">
+  <meta name="description" content="BenTune (iOS ve Android) gizlilik politikası. Mikrofon sesi yalnızca cihaz üzerinde, anlık perde analizi için kullanılır; kaydedilmez ve gönderilmez. Ücretsiz sürümdeki reklamlar Google AdMob'dan gelir; bu sayfa reklam için hangi bilgilerin işlendiğini anlatır.">
   <link rel="canonical" href="https://benav.com.tr/privacy/bentune.html">
   <meta name="theme-color" content="#f7f6f3" media="(prefers-color-scheme: light)">
   <meta name="theme-color" content="#121316" media="(prefers-color-scheme: dark)">
@@ -21,9 +21,19 @@
     .theme-toggle[hidden] { display: none; }
     .legal-body .ozet { padding: 16px 18px; margin: 0 0 32px; border-left: 3px solid var(--accent); border-radius: 0 12px 12px 0; background: var(--accent-tint); }
     .legal-body .ozet strong { color: var(--text); }
+    .legal-body h2[id], .legal-body h3[id] { scroll-margin-top: 88px; }
+    .legal-body a.inl { overflow-wrap: anywhere; }
     .tablo { overflow-x: auto; margin: 0 0 14px; }
     .legal-table th[scope="row"] { color: var(--text); font-size: .96rem; letter-spacing: 0; text-transform: none; font-weight: 700; }
     @media (max-width: 480px) { .legal-table th, .legal-table td { padding: 10px 8px; } }
+    /* Üç sütunlu tablo dar ekranda satır satır okunur (yalnız bu sayfa). */
+    @media (max-width: 480px) {
+      .legal-table.yigin thead { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+      .legal-table.yigin tr { display: block; padding: 10px 0; border-bottom: 1px solid var(--border); }
+      .legal-table.yigin tr:last-child { border-bottom: none; }
+      .legal-table.yigin th, .legal-table.yigin td { display: block; padding: 3px 0; border-bottom: none; }
+      .legal-table.yigin td::before { content: attr(data-etiket) ": "; color: var(--text); font-weight: 700; }
+    }
     .footer-bottom a { text-decoration: underline; text-underline-offset: 2px; }
   </style>
 </head>
@@ -45,34 +55,98 @@
       <header class="legal-head">
         <span class="eyebrow">Gizlilik Politikası</span>
         <h1>BenTune Gizlilik Politikası</h1>
-        <p class="meta">iOS ve Android&nbsp;· Yürürlük tarihi: <time datetime="2026-09-26">26 Eylül 2026</time>&nbsp;· Geliştirici: benav</p>
+        <!-- YAYIN: iki yer tutucuya yayın günü yazılır ve <time datetime="YYYY-MM-DD"> ile sarılır. -->
+        <p class="meta">iOS ve Android&nbsp;· Yürürlük tarihi: [yayın tarihi]&nbsp;· Son güncelleme: [yayın tarihi]&nbsp;· Geliştirici: benav</p>
       </header>
 
       <div class="legal-body">
-        <p class="ozet"><strong>Kısaca:</strong> BenTune çaldığınız sesi yalnızca telefonunuzun içinde ve o anda analiz eder. Ses kaydedilmez, saklanmaz ve hiçbir yere gönderilmez. Uygulamanın internet bağlantısı, hesabı, reklamı, analitiği ya da üçüncü taraf yazılım kiti (SDK) yoktur. Ayarlarınız ve oluşturduğunuz özel enstrümanlar yalnızca cihazınızda durur.</p>
+        <p class="ozet"><strong>Kısaca:</strong> BenTune çaldığınız sesi yalnızca telefonunuzun içinde ve o anda analiz eder. Ses kaydedilmez, saklanmaz ve hiçbir yere gönderilmez. BenTune ücretsizdir ve ara sıra tam ekran reklam gösterir. Reklamları Google'ın AdMob hizmeti sunar. Google'ın uygulamadaki yazılımı, reklam gösterebilmek için cihazınızdan bazı bilgileri Google'a gönderir: IP adresi, reklam kimliği, uygulama içi etkileşimler gibi. Mikrofon sesi, akort ve nota bilgisi bunlar arasında değildir. Tek seferlik Reklamsız sürüm satın alımı reklamları kaldırır. Uygulamada hesap ve benav'a ait analitik yoktur. Ayarlarınız ve oluşturduğunuz özel enstrümanlar yalnızca cihazınızda durur.</p>
 
         <h2>Bu politika neyi kapsar?</h2>
         <p>Bu metin, benav tarafından geliştirilen BenTune enstrüman akort uygulamasının iOS ve Android sürümleri için geçerlidir. İki sürüm de bilgilerinizi aynı biçimde ele alır; platforma göre değişen noktalar ayrıca belirtilmiştir.</p>
 
-        <h2>Mikrofon ve ses</h2>
+        <h2 id="mikrofon">Mikrofon ve ses</h2>
         <ul>
           <li>BenTune, enstrümanınızın hangi notayı çaldığını ve akordun ne kadar saptığını gösterebilmek için mikrofonu kullanır.</li>
-          <li>Mikrofon yalnızca siz uygulamada dinlemeyi başlattığınızda devreye girer; dinlemeyi aynı düğmeyle istediğiniz an durdurabilirsiniz.</li>
+          <li>Mikrofon, siz dinlemeyi başlattığınızda devreye girer. Ayarlar'daki <em>Açılışta Dinlemeye Başla</em> seçeneğini açtıysanız Akort ekranı açıldığında da devreye girer. Dinlemeyi aynı düğmeyle istediğiniz an durdurabilirsiniz.</li>
           <li>Mikrofondan gelen ses, cihazın belleğinde kısa parçalar hâlinde gerçek zamanlı olarak işlenir. Her parçadan yalnızca perde (frekans) bilgisi çıkarılır; ses parçası işlendikten sonra tutulmaz.</li>
-          <li>Ses kaydedilmez, dosyaya yazılmaz ve cihazın dışına çıkmaz. benav dahil hiç kimse bu sese erişemez.</li>
+          <li>Ses kaydedilmez, dosyaya yazılmaz ve cihazın dışına çıkmaz. BenTune bu sesi, reklam yazılımı dahil hiçbir bileşene ya da kişiye vermez; benav da bu sese erişemez.</li>
           <li>Mikrofon kullanılırken iPhone'da ekranın üst kısmında turuncu bir nokta, Android 12 ve sonraki sürümlerde ise bir mikrofon göstergesi belirir. Bu, işletim sisteminin kendi uyarısıdır.</li>
         </ul>
 
-        <h2>Uygulamada bulunmayanlar</h2>
+        <h2 id="mikrofon-ve-reklam">Mikrofon ve reklamlar</h2>
+        <p>Mikrofonun reklamlarla hiçbir ilişkisi yoktur. BenTune mikrofon sesini yalnızca akort için, cihazın içinde ve o anda işler. Reklam yazılımına ses, akort ya da nota bilgisi vermez. Google'ın reklam yazılımının kendi veri beyanında da ses ya da mikrofon verisi yoktur. Akort ederken reklam açılmaz; ayrıntılar aşağıda, <a class="inl" href="#reklamlar">Reklamlar</a> bölümündedir.</p>
+
+        <h2 id="internet">İnternet, hesap ve analitik</h2>
         <ul>
-          <li><strong>İnternet bağlantısı yok.</strong> Uygulama hiçbir sunucuya bağlanmaz. Android sürümü internet izni de istemez; istediği tek izin mikrofondur.</li>
+          <li><strong>İnternet yalnızca reklam ve satın alma için.</strong> BenTune'un kendi kodu hiçbir sunucuya bağlanmaz. İnternet yalnızca Google'ın reklam ve izin yazılımları ile App Store ve Google Play'in satın alma hizmetleri tarafından kullanılır. Bu yüzden Android sürümü internet, reklam kimliği ve mağaza faturalandırması gibi, kurulumda kendiliğinden verilen ve pencere açmayan izinleri de içerir. Uygulamanın sizden açıkça istediği izinler mikrofon ve iPhone'da izleme iznidir.</li>
           <li><strong>Hesap yok.</strong> Kayıt olmanız, giriş yapmanız ya da ad, e-posta, telefon gibi bilgiler vermeniz gerekmez.</li>
-          <li><strong>Analitik ve izleme yok.</strong> Kullanım istatistiği tutulmaz, reklam kimliği okunmaz, sizi başka uygulama ya da sitelerde izleyen bir mekanizma yoktur.</li>
-          <li><strong>Reklam yok.</strong></li>
-          <li><strong>Üçüncü taraf SDK yok.</strong> Uygulamada reklam, analitik, çökme raporlama ya da başka bir amaçla veri toplayan bir şirketin yazılım kiti bulunmaz.</li>
+          <li><strong>benav analitik kullanmaz.</strong> BenTune'un kendi kodu kullanım istatistiği tutmaz ve göndermez. Reklam kimliği ve uygulama içi etkileşimler, Google'ın reklam yazılımı tarafından reklam, ölçüm ve dolandırıcılığı önleme amacıyla işlenir (aşağıda <a class="inl" href="#reklamlar">Reklamlar</a>). iPhone'da reklam kimliği yalnızca izleme izni verirseniz okunabilir.</li>
+          <li><strong>Üçüncü taraf yazılım kitleri.</strong> Uygulamada yalnızca Google'ın şu kitleri vardır: Google Mobile Ads (AdMob, reklamlar), Google User Messaging Platform (izin ekranı) ve Android'de Google Play Faturalandırma Kitaplığı (satın alma). iPhone'da satın almayı Apple'ın işletim sistemine yerleşik StoreKit hizmeti yürütür. Ayrı bir analitik ya da çökme raporlama kiti yoktur.</li>
         </ul>
-        <p>Bu nedenle benav, uygulama üzerinden sizinle ilgili hiçbir kişisel veri toplamaz, saklamaz ve kimseyle paylaşmaz.</p>
+        <!-- AVUKAT: [G-A1] benav'ın bu işlemedeki sıfatı (veri sorumlusu / ortak veri sorumlusu) ve "kişisel veri" nitelendirmesi. Cümle bilerek hukuki nitelendirme içermez. "Toplu raporlar" ifadesini sahip AdMob konsolunda ayrıca doğrular (DOĞRULA G-S2). -->
+        <p>benav, uygulama üzerinden sizinle ilgili bilgileri kendi sunucularında toplamaz ve saklamaz. Reklam için işlenen bilgiler cihazınızdan doğrudan Google'a gider. AdMob bize kullanıcı bazında veri değil, toplu raporlar (ör. gösterim sayısı, gelir) sunar.</p>
         <p>Cihazınızın ayarlarında tanılama verilerinin uygulama geliştiricileriyle paylaşılmasına izin verdiyseniz, Apple ya da Google, uygulama çöktüğünde oluşan teknik raporları (ör. cihaz modeli, sistem sürümü, hatanın oluştuğu kod konumu) kendi geliştirici panelleri üzerinden bize iletebilir. Bu raporları işletim sistemi oluşturur; ses ya da kişisel içerik barındırmazlar ve yalnızca hataları gidermek için kullanılır. Bu paylaşımı cihaz ayarlarınızdan kapatabilirsiniz.</p>
+
+        <h2 id="reklamlar">Reklamlar</h2>
+
+        <h3>Reklamlar ne zaman çıkar?</h3>
+        <p>BenTune ücretsizdir ve ara sıra tam ekran reklam gösterir; bant reklam yoktur.</p>
+        <ul>
+          <li>Reklam yalnızca sekme değiştirdiğinizde ya da Ayarlar veya Yardım sayfasını kapattığınızda çıkabilir.</li>
+          <li>Uygulamayı açarken ve arka plandan dönerken çıkmaz.</li>
+          <li>Akort ederken reklam açılmaz: mikrofon dinlerken, referans ses ya da akor çalarken, metronom çalarken ve dinleme durduktan sonraki bir dakika içinde reklam gösterilmez.</li>
+          <li>Uygulamayı ilk açtığınız andan sonraki 24 saat reklam gösterilmez.</li>
+          <li>İki reklam arasında en az 4 dakika geçer; uygulamanın her açılışında en çok 3 reklam gösterilir.</li>
+          <li>Reklamlar sessiz oynar.</li>
+        </ul>
+
+        <h3>Reklam içeriği</h3>
+        <p>Uygulama, Google'dan yalnızca Google'ın reklam içerik derecelendirmesinde en çok “T” (Gençler) düzeyinde olan reklamları ister; yetişkinlere yönelik olarak derecelendirilmiş reklamlar istenmez. Reklamları reklamverenler hazırlar ve Google sunar; benav reklamları tek tek seçmez.</p>
+
+        <h3>Reklamları kim sunar?</h3>
+        <!-- AVUKAT: [G-A2] AdMob hizmetini sunan Google tüzel kişisinin adı (ör. AEA/BK için Google Ireland Limited, diğer bölgeler için Google LLC) hukuki nitelendirme ister; yer tutucu bilerek bırakıldı. -->
+        <p>Reklamları Google'ın AdMob hizmeti sunar ([hizmeti sunan Google şirketinin unvanı]). Uygulamada bunun için Google'ın iki yazılım kiti vardır: reklamları getiren Google Mobile Ads ve gerektiğinde izin isteyen Google User Messaging Platform.</p>
+
+        <h3>Google'a hangi bilgiler gider, ne için kullanılır?</h3>
+        <p>Google'ın yayımladığı açıklamalara göre bu yazılımlar cihazınızdan Google'a şu bilgileri gönderir:</p>
+        <ul>
+          <li><strong>IP adresi.</strong> Cihazın yaklaşık konumunu tahmin etmek için kullanılabilir. Uygulama GPS ya da kesin konum kullanmaz ve konum izni istemez.</li>
+          <li><strong>Cihaz tanımlayıcıları:</strong> reklam kimliği ve uygulamaya ya da geliştiriciye özgü tanımlayıcılar. iPhone'da reklam kimliği (IDFA) yalnızca izleme izni verirseniz okunabilir.</li>
+          <li><strong>Uygulama içi etkileşimler:</strong> uygulamanın açılması, dokunmalar, reklam ve video görüntülemeleri, gördüğünüz reklamlara ilişkin bilgiler.</li>
+          <li><strong>Tanılama bilgileri:</strong> açılış süresi, takılma oranı, enerji kullanımı gibi performans bilgileri ve çökme kayıtları.</li>
+        </ul>
+        <p>Google bu bilgileri reklam göstermek ve ölçmek, analiz yapmak ve dolandırıcılığı önlemek için kullanır. Google, bu bilgilerin aktarım sırasında şifrelendiğini (TLS) belirtir.</p>
+        <p><strong>Google'a gitmeyenler.</strong> Mikrofon sesi; akort, nota ve frekans bilgisi; seçtiğiniz enstrümanlar; ayarlarınız ve özel enstrümanlarınız reklam yazılımına verilmez. Adınız ya da e-posta adresiniz gibi bilgiler zaten istenmez.</p>
+
+        <h3>Kişiselleştirilmiş ve kişiselleştirilmemiş reklam</h3>
+        <p>Uygulamayı ilk açtığınızda Google'ın reklam yazılımı başlatılmaz ve sizden reklam izni istenmez. İzin pencereleri, gerekiyorsa, ilk akort oturumunuz bittikten sonra gösterilir.</p>
+        <ul>
+          <!-- AVUKAT: [G-A3] AB'de Google'ın izin ekranında bütün seçenekleri reddeden kullanıcıya iOS izleme izninin yine sorulması (Apple'ın tutarlılık önerisi; taslak §5 ve §10-8). Cümle bugünkü davranışı anlatır. -->
+          <li><em>iPhone:</em> iOS'un izleme izni penceresi bir kez gösterilir; izin gereken bölgelerde bundan önce Google'ın izin ekranı da gelir. İzleme izni verirseniz reklamlar ilginize göre seçilebilir. İzin vermezseniz reklamlar kişiselleştirilmeden gösterilir.</li>
+          <!-- AVUKAT: [G-A4] Türkiye'de kişiselleştirilmiş reklam için KVKK m.5 kapsamında açık rıza gerekip gerekmediği. Gerekirse AdMob'da Türkiye için izin mesajı tanımlanır ve "Bu bölgelerin dışında…" cümlesi değişir. Bugünkü AdMob ayarında izin mesajı AB/AEA/BK içindir. -->
+          <li><em>Android:</em> Avrupa Ekonomik Alanı ve Birleşik Krallık gibi izin gereken bölgelerde Google'ın izin ekranı gösterilir; seçiminize göre reklamlar kişiselleştirilir ya da kişiselleştirilmez. Bu bölgelerin dışında reklamlar kişiselleştirilmiş olarak istenir. Reklam kimliğinizi telefonun ayarlarından sıfırlayabilir ya da silebilirsiniz.</li>
+        </ul>
+        <!-- DOĞRULA: [G-S1] Üç Google bağlantısı bu oturumda açılmadı (policies.google.com ve myadcenter.google.com izinli okuma listesinde değil); sahip yayından önce açıp doğrular. -->
+        <p>Google'ın bu bilgileri nasıl kullandığı: <a class="inl" href="https://policies.google.com/technologies/partner-sites">Google, hizmetlerini kullanan site ve uygulamalardan gelen bilgileri nasıl kullanır?</a> ve <a class="inl" href="https://policies.google.com/privacy">Google Gizlilik Politikası</a>. Google'daki reklam tercihleriniz: <a class="inl" href="https://myadcenter.google.com">Reklam Merkezim</a>.</p>
+
+        <h3>Reklamları tamamen kapatmak</h3>
+        <p>Tek seferlik Reklamsız sürümü satın alırsanız uygulama o andan sonra yeni reklam istemez. Sonraki açılışlarda Google'ın reklam yazılımını hiç başlatmaz ve izin ekranı göstermez (aşağıda <a class="inl" href="#satin-alma">Satın alma</a>).</p>
+
+        <h3 id="uygunsuz-reklam">Uygunsuz reklam</h3>
+        <!-- DOĞRULA: [G-S3] AdMob tam ekran reklamında Google'a bildirme seçeneği (bilgi simgesi) test cihazında görülürse cümlenin başına "reklamın üzerindeki bilgi simgesinden Google'a bildirebilir ya da" eklenir (App Review 2.5.18). Görülmeden yazılmadı. -->
+        <p>Uygunsuz ya da yaşa uygun olmayan bir reklam görürseniz <a class="inl" href="/destek/bentune.html#uygunsuz-reklam">BenTune Destek</a> sayfasındaki adresten bize yazabilirsiniz.</p>
+
+        <h2 id="satin-alma">Satın alma: Reklamsız sürüm</h2>
+        <ul>
+          <li>Reklamsız sürüm, reklamları kaldıran tek seferlik bir satın alımdır; özellikler aynı kalır. Fiyat, mağazanın bölgenize göre gösterdiği fiyattır.</li>
+          <!-- DOĞRULA: [G-S4] Mağazaların geliştiriciye sunduğu satış bilgileri (App Store Connect, Play Console) sahipçe görülmeden bu konuda cümle yazılmadı. -->
+          <li>Ödemeyi Apple (App Store) ya da Google (Google Play) kendi hesabınız üzerinden alır ve kendi koşullarıyla yürütür. benav kart ya da ödeme bilgilerinizi görmez.</li>
+          <li>Uygulama her açılışta Reklamsız ürününün fiyatını ve satın alma durumunu App Store'dan ya da Google Play'den sorar. Satın alma hakkınız cihazınızda da saklanır; internet yokken son bilinen durum geçerlidir.</li>
+          <li>Satın alım mağaza hesabınıza bağlıdır ve platformlar arasında geçmez: App Store'da yapılan satın alım Android'de, Google Play'de yapılan iPhone'da geçerli değildir. Yeni bir cihazda aynı mağaza hesabıyla Ayarlar'daki <em>Satın alımları geri yükle</em> satırını kullanın.</li>
+          <li>İade edilen satın alımda reklamlar geri gelir.</li>
+        </ul>
+        <!-- AVUKAT: [G-A5] Cayma hakkı, tüketici mevzuatı ve mağazaların yürüttüğü ödemede benav'ın yükümlülükleri (taslak §10-6). Bu konuda avukat görüşü gelene dek sayfaya bilerek cümle eklenmedi. -->
 
         <h2>Cihazınızda saklanan bilgiler</h2>
         <p>Hangi bilginin nerede tutulduğu aşağıdadır. Ayarlarınız ve seçimleriniz, uygulamayı yeniden açtığınızda kaldığınız yerden devam edebilmeniz için saklanır:</p>
@@ -83,13 +157,16 @@
             </thead>
             <tbody>
               <tr><th scope="row">Mikrofon sesi</th><td>Hiçbir yerde; yalnızca anlık analiz</td></tr>
-              <tr><th scope="row">Ayarlar (A4 kalibrasyonu, mikrofon hassasiyeti, tema, yüksek kontrast)</th><td>Yalnızca cihazınızda</td></tr>
+              <tr><th scope="row">Ayarlar ve tercihler (ör. A4 kalibrasyonu, mikrofon hassasiyeti, akort toleransı, referans ses, açılışta dinleme, tema, yüksek kontrast, metronom temposu ve ölçüsü, görünüm tercihleri)</th><td>Yalnızca cihazınızda</td></tr>
               <tr><th scope="row">Son seçtiğiniz enstrüman ve akort düzeni</th><td>Yalnızca cihazınızda</td></tr>
               <tr><th scope="row">Oluşturduğunuz özel enstrümanlar</th><td>Yalnızca cihazınızda</td></tr>
+              <tr><th scope="row">Reklam zamanlaması: reklamlı sürümü ilk açtığınız an, son reklamın gösterildiği an, ilk akort oturumunun bitip bitmediği</th><td>Yalnızca cihazınızda</td></tr>
+              <tr><th scope="row">Reklamsız sürüm hakkı</th><td>Cihazınızda; satın alım kaydı App Store ya da Google Play hesabınızda</td></tr>
+              <tr><th scope="row">Reklam izni tercihiniz (gerektiği bölgelerde)</th><td>Cihazınızda, Google'ın izin yazılımı tarafından; reklam isteklerine eklenir</td></tr>
             </tbody>
           </table>
         </div>
-        <p>Bu bilgilerin hiçbiri benav'a ya da başka birine gönderilmez. Uygulamayı sildiğinizde cihazdaki bu bilgiler de silinir. Android'de uygulamayı silmeden temizlemek için <em>Ayarlar › Uygulamalar › BenTune › Depolama</em> bölümündeki verileri temizleme seçeneğini kullanabilirsiniz (menü adları cihaza göre biraz farklı olabilir).</p>
+        <p>Tablodaki bilgiler benav'a gönderilmez. Reklam izni tercihiniz (gerektiği bölgelerde) Google'ın yazılımı tarafından reklam isteklerine eklenir. Uygulamayı sildiğinizde cihazdaki bu bilgiler de silinir. Reklamsız satın alımınız App Store ya da Google Play hesabınızda kalır ve geri yüklenebilir. Android'de uygulamayı silmeden temizlemek için <em>Ayarlar › Uygulamalar › BenTune › Depolama</em> bölümündeki verileri temizleme seçeneğini kullanabilirsiniz (menü adları cihaza göre biraz farklı olabilir).</p>
 
         <h2>İşletim sisteminin yedekleri</h2>
         <p>iPhone'da iCloud Yedekleme (ya da bilgisayara yedekleme), Android'de Android Otomatik Yedekleme açıksa, yukarıdaki ayarlar ve özel enstrümanlar cihazınızın yedeğine dahil edilebilir; yeni bir cihaza geçtiğinizde bu sayede geri gelirler. Bu yedeklemeyi uygulama değil, işletim sistemi Apple ya da Google hesabınız üzerinden yapar ve ilgili şirketin koşullarına tabidir. benav bu yedeklere erişemez. Ses hiçbir zaman saklanmadığı için yedeklere de girmez. Yedeklemeyi cihazınızın ayarlarından yönetebilir ya da kapatabilirsiniz.</p>
@@ -98,8 +175,29 @@
         <p>Uygulamadaki <em>Gizlilik Politikası</em> ve <em>Destek ve Geri Bildirim</em> satırları, bu sayfaları cihazınızın tarayıcısında açar; uygulama bu sırada hiçbir bilgi göndermez. Web sayfalarımızı görüntülediğinizde, sayfanın size ulaştırılabilmesi için web sitesinin barındırma ve yazı tipi hizmeti sağlayıcıları IP adresi gibi standart bağlantı bilgilerini işler. Bu, uygulamanın kendisinden bağımsızdır.</p>
         <p>Bize e-posta gönderirseniz, e-posta adresinizi ve mesajınızda kendi isteğinizle paylaştığınız bilgileri (ör. cihaz modeli, uygulama sürümü) yalnızca talebinizi yanıtlamak için kullanırız. Bu bilgileri başka bir amaçla kullanmaz, kimseyle paylaşmayız; yazışmanın silinmesini istediğinizde sileriz.</p>
 
-        <h2>Çocuklar</h2>
-        <p>BenTune her yaştan kullanıcıya uygundur. Uygulama, çocuklar dahil hiç kimseden kişisel veri toplamaz. 13 yaşından küçük çocuklardan bilerek kişisel bilgi almayız; bir çocuğun bize e-postayla kişisel bilgi gönderdiğini düşünüyorsanız <a class="inl" href="mailto:info@benav.com.tr">info@benav.com.tr</a> adresine yazın, bu bilgileri sileriz. Ebeveynler mikrofon iznini aşağıda anlatıldığı gibi istedikleri zaman kapatabilir.</p>
+        <h2 id="ucuncu-taraflar">Üçüncü taraflar ve yurt dışına aktarım</h2>
+        <p>BenTune'da bilgilerinizi işleyen üçüncü taraflar ve ne için işledikleri aşağıdadır:</p>
+        <div class="tablo">
+          <table class="legal-table yigin">
+            <thead>
+              <tr><th scope="col">Şirket ve hizmet</th><th scope="col">Ne için?</th><th scope="col">Hangi bilgiler?</th></tr>
+            </thead>
+            <tbody>
+              <tr><th scope="row">Google: AdMob (Google Mobile Ads) ve User Messaging Platform</th><td data-etiket="Amaç">Reklam göstermek ve ölçmek, analiz, dolandırıcılığı önleme; gereken bölgelerde reklam izninizi sormak</td><td data-etiket="Bilgiler">Yukarıda <a class="inl" href="#reklamlar">Reklamlar</a> bölümünde sayılanlar</td></tr>
+              <tr><th scope="row">Apple: App Store</th><td data-etiket="Amaç">iPhone'da Reklamsız sürüm satın alımı</td><td data-etiket="Bilgiler">Apple hesabınız ve ödeme bilgileriniz; Apple'da kalır, benav görmez</td></tr>
+              <tr><th scope="row">Google: Google Play Faturalandırma</th><td data-etiket="Amaç">Android'de Reklamsız sürüm satın alımı</td><td data-etiket="Bilgiler">Google hesabınız ve ödeme bilgileriniz; Google'da kalır, benav görmez</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <!-- AVUKAT: [G-A6] Yurt dışına aktarım (KVKK m.9) ve dayanağı. Olgu cümlesi taslaktan; dayanak için yer tutucu bilerek bırakıldı. -->
+        <p>Reklam ve izin bilgileri cihazınızdan doğrudan Google'ın sunucularına gider; bu sunucuların Türkiye dışında olması olasıdır. Satın almayı Apple ya da Google yürütür. Bu aktarımın KVKK kapsamındaki dayanağı: [avukat görüşüyle yazılacak].</p>
+        <!-- AVUKAT: [G-A7] App Review 5.1.1(i) veriyi alan üçüncü tarafların aynı ya da eşdeğer korumayı sağladığının teyidini ister; bu teyidin hukuki ifadesi avukattan gelecek. Cümle en sade biçimiyle yazıldı. -->
+        <p>Bilgilerin paylaşıldığı bu şirketler, bu politikada anlatılanla aynı ya da eşdeğer koruma sağlar ve bilgileri kendi gizlilik politikalarına göre işler.</p>
+
+        <h2 id="cocuklar">Çocuklar ve yaş sınırı</h2>
+        <!-- AVUKAT: [G-A8] Reşit olmayanlar: 13+ hedef kitle ifadesi; 13–18 yaş arası için KVKK'da ek yükümlülük olup olmadığı ve bu grupta kişiselleştirilmiş reklamın kapatılması gerekip gerekmediği (taslak §3f, §10-5). Eski "her yaştan kullanıcıya uygundur" ifadesi 13+ ile çeliştiği için kaldırıldı. -->
+        <p>BenTune'un içeriği her yaşa uygundur; ancak uygulama ücretsiz sürümde reklam gösterdiği için 13 yaş ve üzeri kullanıcılara yöneliktir ve 13 yaşından küçük çocuklara yönelik değildir. Reklamlar, yukarıda anlatıldığı gibi Google'ın içerik derecelendirmesinde en çok “T” (Gençler) düzeyiyle sınırlıdır.</p>
+        <p>Ebeveynler Reklamsız sürümle reklamları tamamen kapatabilir, cihazın izin ayarlarıyla kişiselleştirilmiş reklamı kapatabilir ve mikrofon iznini aşağıda anlatıldığı gibi istedikleri zaman kapatabilir. 13 yaşından küçük çocuklardan bilerek kişisel bilgi almayız; bir çocuğun bize e-postayla kişisel bilgi gönderdiğini düşünüyorsanız <a class="inl" href="mailto:info@benav.com.tr">info@benav.com.tr</a> adresine yazın, bu bilgileri sileriz.</p>
 
         <h2>Mikrofon iznini değiştirme</h2>
         <p>Mikrofon iznini istediğiniz zaman verebilir ya da geri alabilirsiniz:</p>
@@ -109,13 +207,31 @@
         </ul>
         <p>İzin kapalıyken akort özelliği sesi duyamaz; metronom, çember ve akor rehberi mikrofonsuz çalışmaya devam eder.</p>
 
-        <h2>KVKK ve GDPR kapsamındaki haklarınız</h2>
+        <h2 id="reklam-izinleri">Reklam izinlerini değiştirme</h2>
+        <!-- DOĞRULA: [G-S5] iOS menü adları Türkçe iOS 16 ve sonrasına göredir; Android yolları cihaza göre değişir. Sahip kendi cihazlarında yolları bir kez doğrular. -->
+        <ul>
+          <li><strong>iOS:</strong> <em>Ayarlar › Gizlilik ve Güvenlik › İzleme</em> bölümünde BenTune için izleme iznini açın ya da kapatın. <em>Uygulamaların İzleme İsteğine İzin Ver</em> kapalıysa uygulamalar izin isteyemez ve reklamlar kişiselleştirilmez.</li>
+          <li><strong>Android:</strong> Reklam kimliğini telefonun ayarlarındaki reklam bölümünden sıfırlayabilir ya da silebilirsiniz. Bu bölüm çoğu cihazda <em>Ayarlar › Gizlilik › Reklamlar</em> ya da <em>Ayarlar › Google › Reklamlar</em> yolundadır; menü adları cihaza göre değişir.</li>
+          <li><strong>Uygulama içinde:</strong> Bulunduğunuz bölgede gerekiyorsa <em>Ayarlar › REKLAMLAR › Gizlilik ve reklam tercihleri</em> satırı görünür. Satır Google'ın izin ekranını yeniden açar ve seçiminizi değiştirmenizi sağlar.</li>
+          <li>Reklamsız sürümü satın aldıysanız bu ayarlara gerek kalmaz; uygulama reklam istemez.</li>
+        </ul>
+
+        <h2 id="haklariniz">KVKK ve GDPR kapsamındaki haklarınız</h2>
         <p>6698 sayılı Kişisel Verilerin Korunması Kanunu (KVKK) ve Avrupa Birliği Genel Veri Koruma Tüzüğü (GDPR) kapsamında; kişisel verilerinizin işlenip işlenmediğini öğrenme, işlendiyse bilgi ve kopya isteme, düzeltilmesini ya da silinmesini isteme, işlenmesine itiraz etme ve verilerinizin aktarılmasını isteme haklarına sahipsiniz.</p>
-        <p>BenTune kişisel veri toplamadığı için benav'ın elinde uygulamayı kullanımınıza dair bir kayıt bulunmaz. Cihazınızdaki bilgiler tamamen sizin denetiminizdedir ve yukarıda anlatıldığı gibi dilediğiniz an silinebilir. Bize e-posta yazdıysanız, yazışmanızla ilgili bu haklarınızı <a class="inl" href="mailto:info@benav.com.tr">info@benav.com.tr</a> adresine başvurarak kullanabilirsiniz; başvurunuzu en geç 30 gün içinde yanıtlarız.</p>
+        <!-- AVUKAT: [G-A9] benav'ın sıfatı (veri sorumlusu), unvanı ve adresi; VERBİS kaydı gerekip gerekmediği (taslak §10-4). Unvan ve adres için yer tutucu; VERBİS hakkında bilerek cümle yok. -->
+        <p><strong>Veri sorumlusu:</strong> [benav unvanı ve adresi]. Başvurularınız için iletişim adresi: <a class="inl" href="mailto:info@benav.com.tr">info@benav.com.tr</a>.</p>
+        <!-- AVUKAT: [G-A10] İşlenen veri kategorileri ve amaçlarının KVKK açısından sınıflandırılması (taslak §3g). Cümle yalnız olguyu anlatır. -->
+        <p><strong>İşlenen bilgiler ve amaçlar:</strong> benav'ın kendi sunucularında uygulamayı kullanımınıza dair bir kayıt bulunmaz. Reklam için işlenen bilgiler (IP adresi, cihaz ve reklam tanımlayıcıları, uygulama içi etkileşimler, tanılama bilgileri) cihazınızdan doğrudan Google'a gider ve yukarıda <a class="inl" href="#reklamlar">Reklamlar</a> bölümünde anlatılan amaçlarla işlenir. Bize e-posta yazarsanız e-posta adresiniz ve mesajınız yalnızca talebinizi yanıtlamak için kullanılır. Yurt dışına aktarım için <a class="inl" href="#ucuncu-taraflar">Üçüncü taraflar ve yurt dışına aktarım</a> bölümüne bakın.</p>
+        <!-- AVUKAT: [G-A11] Hukuki sebep (KVKK m.5: açık rıza mı, başka bir sebep mi; GDPR m.6). İlk iki cümle bugünkü uygulama davranışını anlatır; hukuki sebep için yer tutucu bilerek bırakıldı. -->
+        <p><strong>Hukuki sebep:</strong> Kişiselleştirilmiş reklam, gereken yerlerde izninize bağlıdır: iPhone'da izleme izni, izin gereken bölgelerde Google'ın izin ekranı. İzin vermezseniz reklamlar kişiselleştirilmeden gösterilir. Bu işlemelerin KVKK ve GDPR kapsamındaki hukuki sebebi: [avukat görüşüyle yazılacak].</p>
+        <!-- AVUKAT: [G-A12] Aydınlatma yükümlülüğü (KVKK m.10): bu sayfa mı yeterli, ayrı bir aydınlatma metni mi gerekir, uygulama içinde nerede gösterilir (taslak §10-3). -->
+        <p>Bu politika, BenTune kullanımıyla ilgili kişisel verilerin işlenmesine ilişkin bilgilendirme amacı da taşır.</p>
+        <!-- AVUKAT: [G-A13] Başvuru yolu ve yanıt süresi (KVKK m.11 ve m.13; bugünkü metindeki "en geç 30 gün"), Google'ın tuttuğu verilere ilişkin hakların Google'a karşı nasıl kullanılacağı ve Play Veri güvenliği formundaki "veri silme isteği" yanıtıyla tutarlılık (taslak §10-7). -->
+        <p>Cihazınızdaki bilgiler tamamen sizin denetiminizdedir ve yukarıda anlatıldığı gibi dilediğiniz an silinebilir. Reklam kimliğinizi cihaz ayarlarından sıfırlayabilir ya da silebilir, reklam izninizi <a class="inl" href="#reklam-izinleri">Reklam izinlerini değiştirme</a> bölümündeki yollarla geri alabilirsiniz. Google'ın reklam için işlediği bilgilere ilişkin haklarınızı Google'ın gizlilik politikasında anlatılan yollarla Google'a karşı da kullanabilirsiniz. Haklarınızla ilgili başvurularınızı <a class="inl" href="mailto:info@benav.com.tr">info@benav.com.tr</a> adresine iletebilirsiniz; başvurunuzu en geç 30 gün içinde yanıtlarız.</p>
         <p>Türkiye'de Kişisel Verileri Koruma Kurulu'na, Avrupa Birliği'nde ise bulunduğunuz ülkenin veri koruma otoritesine şikâyette bulunma hakkınız saklıdır.</p>
 
         <h2>Politikadaki değişiklikler</h2>
-        <p>Uygulamaya internet bağlantısı, veri toplama ya da yeni bir izin eklenirse bu sayfayı, söz konusu sürüm yayımlanmadan önce güncelleriz. Güncel metin her zaman bu adrestedir ve yürürlük tarihi sayfanın başında yazar.</p>
+        <p>Uygulamaya yeni bir veri işleme, yeni bir üçüncü taraf ya da yeni bir izin eklenirse bu sayfayı, söz konusu sürüm yayımlanmadan önce güncelleriz. Güncel metin her zaman bu adrestedir ve yürürlük tarihi sayfanın başında yazar.</p>
 
         <h2>İletişim</h2>
         <p>Bu politika ya da verileriniz hakkındaki sorularınız için <a class="inl" href="mailto:info@benav.com.tr">info@benav.com.tr</a> adresine yazabilirsiniz. Kullanımla ilgili yardım için <a class="inl" href="/destek/bentune.html">BenTune Destek</a> sayfasına bakın.</p>
