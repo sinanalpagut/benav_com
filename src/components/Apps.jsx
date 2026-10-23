@@ -82,6 +82,12 @@ function AppCard({ app, index }) {
             <a href={app.deletion}>Hesap Silme</a>
           </>
         )}
+        {app.support && (
+          <>
+            <span className="sep">·</span>
+            <a href={app.support}>Destek</a>
+          </>
+        )}
       </div>
     </article>
   );

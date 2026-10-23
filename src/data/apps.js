@@ -19,7 +19,8 @@ export const SITE = {
    googlePlayUrl: Google Play bağlantısı. Boş ("") bırakılırsa buton gizlenir.
    appStoreUrl  : App Store bağlantısı. Boş ("") bırakılırsa buton gizlenir.
    privacy      : ilgili gizlilik politikası sayfasının yolu (public/privacy/).
-   deletion     : (opsiyonel) hesap & veri silme sayfasının yolu.            */
+   deletion     : (opsiyonel) hesap & veri silme sayfasının yolu.
+   support      : (opsiyonel) destek sayfasının yolu (public/destek/).        */
 export const APPS = [
   {
     id: "beje",
@@ -43,5 +44,16 @@ export const APPS = [
     googlePlayUrl: "https://play.google.com/store/apps/details?id=com.sinan.esmaulhusna",
     appStoreUrl: "",
     privacy: "/privacy/esmaul-husna.html",
+  },
+  {
+    id: "bentune",
+    name: "BenTune: Akort ve Metronom",
+    tag: "Müzik",
+    desc: "Bağlama, ud, tanbur, gitar ve keman için akort; aksak ölçülü metronom, akor rehberi ve beşliler çemberi.",
+    icon: "/icons/bentune.png",
+    googlePlayUrl: "",
+    appStoreUrl: "",
+    privacy: "/privacy/bentune.html",
+    support: "/destek/bentune.html",
   },
 ];
