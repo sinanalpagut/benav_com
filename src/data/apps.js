@@ -52,7 +52,7 @@ export const APPS = [
     desc: "Bağlama, ud, tanbur, gitar ve keman için akort; aksak ölçülü metronom, akor rehberi ve beşliler çemberi.",
     icon: "/icons/bentune.png",
     googlePlayUrl: "",
-    appStoreUrl: "",
+    appStoreUrl: "https://apps.apple.com/tr/app/bentune-akort-ve-metronom/id6824893956",
     privacy: "/privacy/bentune.html",
     support: "/destek/bentune.html",
   },
