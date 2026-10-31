@@ -44,7 +44,7 @@
       <div class="legal-head">
         <span class="eyebrow">Hesap &amp; Veri Silme</span>
         <h1>İnşaat Takip</h1>
-        <p class="meta">Son güncelleme: 27 Ekim 2026 · Geliştirici: benav</p>
+        <p class="meta">Son güncelleme: 31 Ekim 2026 · Geliştirici: benav</p>
       </div>
 
       <div class="legal-body">
@@ -61,8 +61,8 @@
           <li>Ana ekranın sağ üstünde, adının baş harflerinin yazdığı yuvarlağa dokun. <strong>Hesap</strong> sayfası açılır.</li>
           <li>Sayfanın en altındaki <strong>Hesabı Sil</strong> düğmesine dokun.</li>
           <li><strong>Hesabını sil</strong> ekranı neyin silineceğini gösterir. İstersen önce <strong>Önce verilerini indir</strong> ile sahibi olduğun projelerin Excel (CSV) dosyalarını ve yedeğini al; silmeden sonra bu veriler geri getirilemez.</li>
-          <li><strong>Hesabı kalıcı olarak sil</strong> düğmesine dokun. Güvenlik için numarana 6 haneli bir kod gönderilir; kodu gir. Bu adım, telefonunu eline alan başka birinin hesabını silmesini önler.</li>
-          <li>Silme bitince oturumun kapanır; uygulamanın bu telefondaki kopyaları (önbellek, fotoğraflar, belgeler) da temizlenir.</li>
+          <li><strong>Hesabı kalıcı olarak sil</strong> düğmesine dokun. Güvenlik için numaran yeniden doğrulanır: gelen 6 haneli kodu gir (bazı Android cihazlarda doğrulama kod beklemeden kendiliğinden tamamlanır). Bu adım, telefonunu eline alan başka birinin hesabını silmesini önler.</li>
+          <li>Silme bitince oturumun kapanır; uygulamanın bu telefondaki fotoğraf ve belge kopyaları hemen, veritabanı önbelleği uygulamanın bir sonraki açılışında temizlenir (istisnalar aşağıda).</li>
         </ol>
         <p>Silme <strong>anında</strong> yapılır; beklemen gerekmez.</p>
         <p><strong>iPhone'da aboneliğin varsa:</strong> hesabı silmek aboneliği
@@ -82,20 +82,22 @@
         <table class="legal-table">
           <thead><tr><th>Veri türü</th><th>İşlem ve süre</th></tr></thead>
           <tbody>
-            <tr><td>Profilin (ad) ve telefon numaranla giriş kaydın</td><td class="islem"><span class="badge badge-danger">Kalıcı silme</span><span class="sure">Anında</span></td></tr>
+            <tr><td>Profilin (ad, telefon numarası) ve telefon numaranla giriş kaydın</td><td class="islem"><span class="badge badge-danger">Kalıcı silme</span><span class="sure">Anında</span></td></tr>
             <tr><td>Sahibi olduğun projeler ve içindeki tüm kayıtlar: daireler, alıcılar, satışlar, tahsilatlar, taksitler, giderler, malzeme hareketleri, ortak cari hesabı, değişiklik geçmişi</td><td class="islem"><span class="badge badge-danger">Kalıcı silme</span><span class="sure">Anında</span></td></tr>
             <tr><td>Bu projelerin fotoğrafları, fişleri, dekontları ve belgeleri</td><td class="islem"><span class="badge badge-danger">Kalıcı silme</span><span class="sure">Anında</span></td></tr>
             <tr><td>Bu projeler için üretilmiş davet kodları</td><td class="islem"><span class="badge badge-danger">Kalıcı silme</span><span class="sure">Anında</span></td></tr>
             <tr><td>Ortak olduğun projelerdeki üyeliğin, ortak kaydın (ad, hisse) ve “projeye katıldı” hareketi</td><td class="islem"><span class="badge badge-danger">Kalıcı silme</span><span class="sure">Anında</span></td></tr>
             <tr><td>Kullandığın davet kodlarındaki adın ve hesap kimliğin</td><td class="islem"><span class="badge badge-danger">Kalıcı silme</span><span class="sure">Anında</span></td></tr>
-            <tr><td>Uygulamanın bu telefondaki önbelleği, fotoğraf ve belge kopyaları</td><td class="islem"><span class="badge badge-danger">Kalıcı silme</span><span class="sure">Anında (veritabanı önbelleği uygulamanın bir sonraki açılışında)</span></td></tr>
+            <tr><td>Uygulamanın bu telefondaki önbelleği, fotoğraf ve belge kopyaları</td><td class="islem"><span class="badge badge-danger">Kalıcı silme</span><span class="sure">Anında (veritabanı önbelleği uygulamanın bir sonraki açılışında; istisnalar aşağıda)</span></td></tr>
             <tr><td>Silinen kayıtların veritabanındaki sistem sürüm kopyaları</td><td class="islem"><span class="badge badge-warn">Kendiliğinden silinir</span><span class="sure">En fazla 1 saat</span></td></tr>
             <tr><td>Silinen dosyaların depolama hizmetindeki geçici kopyaları</td><td class="islem"><span class="badge badge-warn">Kendiliğinden silinir</span><span class="sure">En fazla 7 gün</span></td></tr>
             <tr><td>Sunucu altyapısının istek kayıtları (IP adresi, zaman)</td><td class="islem"><span class="badge badge-warn">Kendiliğinden silinir</span><span class="sure">Yaklaşık 30 gün</span></td></tr>
+            <tr><td>Silinen verilerin Google'ın iç yedekleme sistemlerindeki kopyaları (giriş kaydı, proje kayıtları, dosyalar)</td><td class="islem"><span class="badge badge-warn">Kendiliğinden silinir</span><span class="sure">180 güne kadar</span></td></tr>
           </tbody>
         </table>
-        <p>Veritabanının ayrıca zamanlanmış bir yedeği tutulmaz; silinen bir kayıt
-        sonradan yedekten geri gelmez.</p>
+        <p>Bizim tarafımızda veritabanının ayrıca zamanlanmış bir yedeği tutulmaz;
+        silinen bir kayıt sonradan yedekten geri gelmez. Google'ın kendi iç
+        yedeklerindeki kopyalar yukarıdaki tabloda yazan sürede kendiliğinden silinir.</p>
 
         <h2>Ortakların Ne Olur?</h2>
         <p>Sahibi olduğun projeler silindiğinde, bu projelere davet ettiğin
@@ -110,9 +112,14 @@
         <ul>
           <li><strong>Dışa aktardığın dosyalar:</strong> PDF raporları, Excel (CSV) dosyaları ve yedekler senin cihazında ya da paylaştığın yerde durur. Onlara biz erişemeyiz.</li>
           <li><strong>Başkasının projesindeki bilgiler:</strong> ortak olarak katıldığın projeler sahibine aittir. Ortaklar kayıt ekleyemediği için bu projelerde senin yazdığın bir kayıt yoktur. Kullandığın davet kodunun hangi tarihte kullanıldığı bilgisi proje sahibinde kalır; adın ve hesap kimliğin silinir.</li>
-          <li><strong>Yanlış davet kodu sayacı:</strong> davet koduyla katılırken yanlış kod denediysen, kötüye kullanımı önlemek için deneme sayısı ve zamanı hesap kimliğinle tutulur. Hesap silindikten sonra bu kimliği adına ya da numarana bağlayan bir kayıt kalmaz.</li>
-          <li><strong>iPhone'un kendi yedeği:</strong> iCloud yedeklemesi açıksa, silmeden önce alınmış cihaz yedeğinde uygulamanın önbelleği bir süre kalabilir. Bu yedek senin Apple hesabındadır; ona biz erişemeyiz. Android'de uygulamanın verisi Google yedeğine alınmaz.</li>
-          <li><strong>Fiş okuma ölçümleri (Android):</strong> fiş okuma telefonda yapılır, fişin kendisi gönderilmez. Kullandığı Google ML Kit, Google'a hesabına bağlı olmayan teknik ölçümler (cihaz modeli, işlem süresi gibi) gönderir; bunlar Google'ın kurallarına göre saklanır.</li>
+          <li><strong>Yanlış davet kodu sayacı:</strong> davet koduyla katılırken yanlış kod denediysen, kötüye kullanımı önlemek için deneme sayısı ve zamanı hesap kimliğinle tutulur. Hesap silindikten sonra bizim sistemlerimizde bu kimliği adına ya da numarana bağlayan bir kayıt kalmaz; Google'ın iç yedeklerindeki kopyalar tablodaki sürede silinir.</li>
+          <li><strong>iPhone'un kendi yedeği:</strong> iCloud ya da bilgisayar yedeklemesi açıksa, silmeden önce alınmış cihaz yedeğinde fotoğraf ve belge önbellekleri ile profil bilgilerin kalabilir; veritabanı önbelleği yedeğe alınmaz. Bu yedek senin Apple hesabında ya da bilgisayarındadır; ona biz erişemeyiz. Android'de uygulamanın verisi Google yedeğine alınmaz.</li>
+          <li><strong>iPhone'daki geçici kopyalar:</strong> dışa aktarma dosyaları, dönem raporu PDF'leri ve açtığın belgelerin önizleme kopyaları uygulamanın geçici klasöründe kalır. iOS bu klasörü zamanla kendisi boşaltabilir, ama ne zaman yapacağı belli değildir.</li>
+          <li><strong>iPhone'da planlanmış vade hatırlatmaları:</strong> silmeden önce kurulmuş hatırlatmalar (daire numarası ve tutar) cihazda görünmeye devam edebilir; bildirimlerini İnşaat Takip için Ayarlar'dan kapatabilir ya da uygulamayı kaldırabilirsin.</li>
+          <li><strong>Veritabanı önbelleği istisnası (Android):</strong> uygulama yeniden açılmadan aynı telefonda başka bir hesapla (aynı numarayla açılan yeni hesap dahil) giriş yapılırsa, silinen hesabın veritabanı önbelleği uygulamadan erişilemez biçimde uygulama kaldırılana kadar telefonda kalabilir.</li>
+          <li><strong>Firebase kurulum kimliği (Android):</strong> sunucu işlevleri çağrıldığında oluşan kurulum kimliği ve ona bağlı bildirim jetonu Google'ın kurallarına göre saklanır.</li>
+          <li><strong>Google'ın telefon numarası kaydı:</strong> girişi sağlayan Google, girişte kullandığın numarayı kendi hizmetlerinde istenmeyen ileti ve kötüye kullanımı önlemek için ayrıca saklar. Bu kayıt Google'ın kurallarına tabidir; hesap silme onu kaldırmaz.</li>
+          <li><strong>Fiş okuma ölçümleri (Android):</strong> fiş okuma telefonda yapılır; okuma için fişin fotoğrafı ya da metni gönderilmez. Kullandığı Google ML Kit, Google'a hesabına bağlı olmayan teknik ölçümler (cihaz modeli, işlem süresi gibi) gönderir; bunlar Google'ın kurallarına göre saklanır.</li>
         </ul>
 
         <div class="legal-warning">
