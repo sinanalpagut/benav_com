@@ -36,16 +36,6 @@ export const APPS = [
     deletion: "/privacy/beje-hesap-silme.html",
   },
   {
-    id: "esmaul-husna",
-    name: "Esmaül Hüsna Pro – Sesli",
-    tag: "İslami",
-    desc: "Allah'ın 99 güzel ismini anlamları ve okunuşlarıyla keşfedin, üzerine düşünün.",
-    icon: "/icons/esmaul-husna.png",
-    googlePlayUrl: "https://play.google.com/store/apps/details?id=com.sinan.esmaulhusna",
-    appStoreUrl: "",
-    privacy: "/privacy/esmaul-husna.html",
-  },
-  {
     id: "bentune",
     name: "BenTune: Akort ve Metronom",
     tag: "Müzik",
