@@ -36,7 +36,10 @@
       margin: 0 0 18px; font-variant-numeric: tabular-nums;
       word-break: break-all;
     }
-    .kod-yok { font-size: 1.05rem; font-weight: 700; color: var(--text-soft); margin: 0 0 6px; }
+    /* Kodsuz durum: kod için ayrılan geniş harf aralığı ve büyük harf biçimi
+       buraya geçmesin diye .kod sınıfı kaldırılıyor, düz metin biçimi veriliyor. */
+    .kod-yok-blok { margin: 0 0 6px; letter-spacing: normal; text-transform: none; }
+    .kod-yok { font-size: 1.05rem; font-weight: 700; letter-spacing: normal; text-transform: none; color: var(--text-soft); }
     .kod-yok-alt { font-size: .92rem; color: var(--text-mute); margin: 0; }
     .kopyala-durum { font-size: .86rem; color: var(--text-mute); margin-top: 11px; min-height: 1.2em; }
     .magaza-notu {
@@ -221,6 +224,7 @@
     } else {
       // KODSUZ DURUM SESSİZ GEÇİLMİYOR: boş bir kutu gören kullanıcı
       // sayfanın bozuk olduğunu düşünür ve davetten vazgeçer.
+      kodEl.className = "kod-yok-blok";
       kodEl.innerHTML = '<span class="kod-yok">Bağlantıda davet kodu görünmüyor</span>';
       kodEl.insertAdjacentHTML("afterend",
         '<p class="kod-yok-alt">Sana gönderilen altı haneli kodu uygulamaya elle girebilirsin.</p>');
